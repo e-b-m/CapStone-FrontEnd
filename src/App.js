@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import UserContainer from './containers/UserContainer';
 
 const  SERVER_URL = "http://localhost:8080/"
 
@@ -11,7 +12,7 @@ function App() {
   const [error, setError] = useState("");
   
   useEffect(() => {
-    fetch(`${SERVER_URL}users/`)
+    fetch(`${SERVER_URL}users`)
     .then((response) => response.json())
     .then((data) => setUsers(data))
     .catch((error) => setError(error.message))
@@ -31,10 +32,11 @@ function App() {
     .catch((error) => setError(error.message))
   },  []);
   
-
+ 
+  
   return (
     <>
-  
+    <UserContainer users={users}/>
     </>
   );
 }

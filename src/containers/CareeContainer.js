@@ -1,4 +1,4 @@
-const Caree = () => {
+const CareeContainer = () => {
     return( 
         <>
         </>
@@ -6,4 +6,4 @@ const Caree = () => {
      );
 }
  
-export default Caree;
+export default CareeContainer;

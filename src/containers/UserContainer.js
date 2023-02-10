@@ -1,9 +1,12 @@
-const User = () => {
+const UserContainer = ({users}) => {
+    
+    
+    
     return (  
+        <>
 
-        <></>
-
+        </>
     );
 }
  
-export default User;
+export default UserContainer;
