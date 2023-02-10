@@ -6,9 +6,12 @@ const CareeList = ({carees}) => {
         return <Caree key={caree.id} caree={caree}/>
     })
 
+
+
     return (  
         <>
         {careeComponents}
+
         </>
     );
 }
