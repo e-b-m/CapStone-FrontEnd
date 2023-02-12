@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import Caree from "./Caree";
 
 const CareeList = ({carees}) => {
@@ -12,9 +12,23 @@ const CareeList = ({carees}) => {
     // going to pass down the toDoListCaree and setDoListCaree to Caree.js as props 
 
 
+    // trying to map the array within the array...
+
+    //     const listItem = caree.toDoList;
+    //     const toDos = listItem.map((toDo) => {
+    //     return <Caree key={toDo.id} toDo={toDo} />
+    // })
+
+    const mapping = carees.map((eachCaree) => {
+        return eachCaree.toDoList.map((eachToDo) =>{
+            return <p key={eachToDo.id}> {eachToDo}</p>})
+    }, [])
+
+    
     return (  
         <>
         {careeComponents}
+        {mapping}
         {/* <Caree toDoListCaree={toDoListCaree} setToDoListCaree={setToDoListCaree}/> */}
         </>
     );

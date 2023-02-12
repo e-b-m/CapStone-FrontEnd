@@ -1,9 +1,5 @@
-const Caree = ({caree }) => {
-    // toDoListCaree, setToDoListCaree
-    // const listItem = caree.toDoList;
-    // const toDos = listItem.map((toDo) => {
-    //     return <Caree key={toDo.id} toDo={toDo} />
-    // })
+const Caree = ({caree, eachToDo }) => {
+    // these were props that were in line 1: toDoListCaree, setToDoListCaree
 
     // making a method that will show all the current todos and then add the new todos
 
@@ -23,6 +19,7 @@ const Caree = ({caree }) => {
     // I think this might need to be in a form... 
     // we need to make useStates for each state of the todo and then assign it via e.target.value
 
+    
 
     return (
         <>
@@ -30,7 +27,7 @@ const Caree = ({caree }) => {
         <p>Caree Age:{caree.age}</p>
         <p>Caree Bio:{caree.bio}</p>
         <p>Caree unique code:{caree.uniqueCode}</p>
-        <p>To do list: {caree.toDoList.name}</p>
+        <p>To do list: </p>
         </>
      );
     }
