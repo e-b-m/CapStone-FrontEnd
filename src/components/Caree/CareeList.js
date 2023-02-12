@@ -21,12 +21,14 @@ const CareeList = ({carees}) => {
 
     const mapping = carees.map((eachCaree) => {
         return eachCaree.toDoList.map((eachToDo) =>{
-            return <p key={eachToDo.id}> {eachToDo}</p>})
+            return <p> To Do: {eachToDo.name} Description: {eachToDo.description} Who has taken the task: {eachToDo.user}</p> })
+
     }, [])
 
     
     return (  
         <>
+        <hr/>
         {careeComponents}
         {mapping}
         {/* <Caree toDoListCaree={toDoListCaree} setToDoListCaree={setToDoListCaree}/> */}
