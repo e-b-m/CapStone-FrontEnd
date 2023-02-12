@@ -1,8 +1,8 @@
 const Caree = ({caree, eachToDo}) => {
+
     // these were props that were in line 1: toDoListCaree, setToDoListCaree
 
     // making a method that will show all the current todos and then add the new todos
-
     // const addNewToDoCaree = (newToDo) => {
 
     //     fetch(`${SERVER_URL}needs`,{

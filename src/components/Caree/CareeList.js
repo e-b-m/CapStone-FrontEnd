@@ -13,11 +13,8 @@ const CareeList = ({carees}) => {
 
 
     // trying to map the array within the array...
-
-    //     const listItem = caree.toDoList;
-    //     const toDos = listItem.map((toDo) => {
-    //     return <Caree key={toDo.id} toDo={toDo} />
-    // })
+    // can print out every bit of the toDoList and render it using {mapping}
+    // but cannot pass it down to caree, or link it to caree in some other way
 
     const mapping = carees.map((eachCaree) => {
         return eachCaree.toDoList.map((eachToDo) =>{
