@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+
 import './App.css';
 import NeedContainer from './containers/NeedContainer';
 import UserContainer from './containers/UserContainer';
@@ -12,9 +12,9 @@ function App() {
   return (
     <>
     <p>App.js</p>
-    <UserContainer users={users}/>
-    <NeedContainer needs={needs}/>
-    <CareeContainer carees={carees}/>
+    <UserContainer />
+    <NeedContainer />
+    <CareeContainer />
     </>
   );
 }

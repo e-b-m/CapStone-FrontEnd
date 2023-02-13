@@ -1,11 +1,12 @@
 import User from "../components/User/User";
+import { useEffect, useState } from 'react';
 import UserList from "../components/User/UserList";
 
 
 const  SERVER_URL = "http://localhost:8080/"
 
 
-const UserContainer = ({users}) => {
+const UserContainer = () => {
 
     const [error, setError] = useState("");
     const [users, setUsers] = useState([]);

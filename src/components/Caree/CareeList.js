@@ -18,7 +18,7 @@ const CareeList = ({carees}) => {
 
     const mapping = carees.map((eachCaree) => {
         return eachCaree.toDoList.map((eachToDo) =>{
-            return <p> To Do: {eachToDo.name} Description: {eachToDo.description} Who has taken the task: {eachToDo.user}</p> })
+            return <p>  To Do: {eachToDo.name} Description: {eachToDo.description} Who has taken the task: {eachToDo.user}</p> })
 
     }, [])
 

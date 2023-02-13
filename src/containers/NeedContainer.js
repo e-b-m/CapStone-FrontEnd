@@ -1,8 +1,9 @@
+import { useEffect, useState } from 'react';
 import NeedsList from "../components/Need/NeedList";
 
 const  SERVER_URL = "http://localhost:8080/"
 
-const NeedContainer = ({needs}) => {
+const NeedContainer = () => {
 
     const [needs, setNeeds] = useState([]); 
     const [error, setError] = useState("");
