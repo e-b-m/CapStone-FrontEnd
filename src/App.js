@@ -5,6 +5,7 @@ import UserContainer from './containers/UserContainer';
 import CareeContainer from './containers/CareeContainer';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { createContext, useContext, useState } from 'react';
+import SignUp from './components/User/SignUp';
 
 
 // login form + user State
@@ -28,6 +29,7 @@ const [user, setUser] = useState()
     {/* <UserContainer />
     <NeedContainer /> */}
     {/* <CareeContainer /> */}
+    <SignUp/>
     </>
   );
 }
