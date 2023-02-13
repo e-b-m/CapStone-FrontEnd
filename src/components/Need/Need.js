@@ -1,10 +1,10 @@
 const Need = ({need}) => {
     return (  
         <>
-        <p>{need.name}</p>
-        <p>{need.description}</p>
+        <p>Need: {need.name}</p>
+        <p>Description: {need.description}</p>
         <p>{need.completed}</p>
-        <p>{need.caree.name}</p>
+        <p>Caree:{need.caree.name}</p>
         </>
     );
 }
