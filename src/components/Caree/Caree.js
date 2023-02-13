@@ -27,6 +27,7 @@ const Caree = ({caree, eachToDo}) => {
         <p>Caree Age:{caree.age}</p>
         <p>Caree Bio:{caree.bio}</p>
         <p>Caree unique code:{caree.uniqueCode}</p>
+        
         {/* <p>To do list: {eachToDo.name} Description: {eachToDo.description} Who has taken the task: {eachToDo.user}</p> */}
         </>
      );
