@@ -16,18 +16,18 @@ const CareeList = ({carees}) => {
     // can print out every bit of the toDoList and render it using {mapping}
     // but cannot pass it down to caree, or link it to caree in some other way
 
-    const mapping = carees.map((eachCaree) => {
-        return eachCaree.toDoList.map((eachToDo) =>{
-            return <p>  To Do: {eachToDo.name} Description: {eachToDo.description} Who has taken the task: {eachToDo.user}</p> })
+    // const mapping = carees.map((eachCaree) => {
+    //     return eachCaree.toDoList.map((eachToDo) =>{
+    //         return <p>  To Do: {eachToDo.name} Description: {eachToDo.description} Who has taken the task: {eachToDo.user}</p> })
 
-    }, [])
+    // }, [])
 
     
     return (  
         <>
         <hr/>
         {careeComponents}
-        {mapping}
+     
         {/* <Caree toDoListCaree={toDoListCaree} setToDoListCaree={setToDoListCaree}/> */}
         </>
     );

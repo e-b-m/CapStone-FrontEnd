@@ -9,6 +9,8 @@ const CareeContainer = () => {
 
     const [error, setError] = useState("");
     const [carees, setCarees] = useState([]); 
+    const [careeById, setCareeById] = useState({}); 
+    const [careeByUC, setCareeByUC] = useState({}); 
     let {id} = useParams();
     let {uniqueCode} = useParams();
 
@@ -25,14 +27,14 @@ const CareeContainer = () => {
     useEffect (() => {
       fetch(`${SERVER_URL}carees/` + id)
       .then((response) => response.json())
-      .then((data) => setCarees(data))
+      .then((data) => setCareeById(data))
     }, [])
 
     useEffect (() => {
       fetch(`${SERVER_URL}carees/` + uniqueCode)
       .then((response) => response.json())
-      .then((data) => setCarees(data))
-    })
+      .then((data) => setCareeByUC(data))
+    }, [])
 
     // get by uniqueCode
     // post for creating a caree
@@ -42,6 +44,7 @@ const CareeContainer = () => {
     return( 
         <>
         <CareeList carees={carees}/>
+        
         </>
 
      );
