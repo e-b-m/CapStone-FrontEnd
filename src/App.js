@@ -1,8 +1,5 @@
 
 import './App.css';
-import NeedContainer from './containers/NeedContainer';
-import UserContainer from './containers/UserContainer';
-import CareeContainer from './containers/CareeContainer';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { createContext, useContext, useState } from 'react';
 import SignUp from './components/User/SignUp';
@@ -19,25 +16,25 @@ import Footer from './components/Footer';
 const UserContext = createContext (null); 
 
 function App() {
-
 const [user, setUser] = useState()   
 
-  
-  
   return (
     <>
-    <UserContext.Provider value={user}>
-    {/* <Form /> */}
-    <NavBarLanding/>
-    <SignUp/>
-    <LogIn user={user}/>
-    </UserContext.Provider>
-    <Footer/>
-    <p>App.js</p>
-    {/* <UserContainer />
-    <NeedContainer /> 
-    <CareeContainer /> */}
-    
+      
+        <UserContext.Provider value={user}>
+        {/* <Form /> */}
+        <NavBarLanding/>
+{/* 
+        <SignUp/>
+        <LogIn user={user}/> */}
+
+        </UserContext.Provider>
+        <Footer/>
+        <p>App.js</p>
+      {/* <UserContainer />
+          <NeedContainer /> 
+          <CareeContainer /> */}
+     
     </>
   );
 }
