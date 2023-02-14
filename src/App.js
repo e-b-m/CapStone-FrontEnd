@@ -6,6 +6,7 @@ import CareeContainer from './containers/CareeContainer';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { createContext, useContext, useState } from 'react';
 import SignUp from './components/User/SignUp';
+import LogIn from './components/User/LogIn';
 
 
 // login form + user State
@@ -18,55 +19,58 @@ const UserContext = createContext (null);
 function App() {
 
 const [user, setUser] = useState()   
+
   
   
   return (
     <>
     <UserContext.Provider value={user}>
-    <Form />
+    {/* <Form /> */}
+    <SignUp/>
+    <LogIn user={user}/>
     </UserContext.Provider>
     <p>App.js</p>
     {/* <UserContainer />
-    <NeedContainer /> */}
-    {/* <CareeContainer /> */}
-    <SignUp/>
+    <NeedContainer /> 
+    <CareeContainer /> */}
+    
     </>
   );
 }
 
-function Form() {
-  return (
-  <Panel title = "Welcome to Orbit">
-    <Button>Sign Up</Button> 
-    <Button>Log-in</Button> 
-  </Panel>
-  )
-}
+// function Form() {
+//   return (
+//   <Panel title = "Welcome to Orbit">
+//     <Button>Sign Up</Button> 
+//     <Button>Log-in</Button> 
+//   </Panel>
+//   )
+// }
 
 
-function Panel({title, children}){
-  const user = useContext(UserContext); 
-  const className = 'panel-' + user; 
+// function Panel({title, children}){
+//   const user = useContext(UserContext); 
+//   const className = 'panel-' + user; 
 
-  return (
-    <section className={className}>
-    <h1>{title}</h1>
-    {children}
-    </section>
-  )
-}
+//   return (
+//     <section className={className}>
+//     <h1>{title}</h1>
+//     {children}
+//     </section>
+//   )
+// }
 
 
-function Button({children}) {
-  const user = useContext(UserContext); 
-  const className = 'button-' + user; 
+// function Button({children}) {
+//   const user = useContext(UserContext); 
+//   const className = 'button-' + user; 
 
-  return (
-    <button className={className}>
-      {children}
-    </button>
-  )
-}
+//   return (
+//     <button className={className}>
+//       {children}
+//     </button>
+//   )
+// }
 
 
 export default App;

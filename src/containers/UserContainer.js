@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import UserList from "../components/User/UserList";
 
 
+
 const  SERVER_URL = "http://localhost:8080/"
 
 
@@ -27,13 +28,13 @@ const UserContainer = () => {
         .then((data) => setUsersById(data))
     }, [])
 
-    console.log(usersById);
     
+
     return (  
         <>
         <p>Hello from UserContainer</p>
         <UserList users={users}/>
-
+        
         </>
     );
 }
