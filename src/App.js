@@ -5,6 +5,7 @@ import { createContext, useContext, useState } from 'react';
 import SignUp from './components/User/SignUp';
 import LogIn from './components/User/LogIn';
 import NavBarLanding from './components/NavBarLanding';
+import NavBarLoggedIn from './components/NavBarLoggedIn';
 import Footer from './components/Footer';
 
 
@@ -24,7 +25,8 @@ const [user, setUser] = useState()
         <UserContext.Provider value={user}>
         {/* <Form /> */}
         <NavBarLanding/>
-{/* 
+        <NavBarLoggedIn/>
+        {/* 
         <SignUp/>
         <LogIn user={user}/> */}
 
