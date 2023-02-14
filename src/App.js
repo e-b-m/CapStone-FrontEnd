@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { createContext, useContext, useState } from 'react';
 import SignUp from './components/User/SignUp';
 import LogIn from './components/User/LogIn';
+import NavBarLanding from './components/NavBarLanding';
+import Footer from './components/Footer';
 
 
 // login form + user State
@@ -26,9 +28,11 @@ const [user, setUser] = useState()
     <>
     <UserContext.Provider value={user}>
     {/* <Form /> */}
+    <NavBarLanding/>
     <SignUp/>
     <LogIn user={user}/>
     </UserContext.Provider>
+    <Footer/>
     <p>App.js</p>
     {/* <UserContainer />
     <NeedContainer /> 
