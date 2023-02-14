@@ -1,7 +1,7 @@
 const Hero = (() => {
 
     const bubbles = [
-        {
+          {
             s: 0.8,
             x: 2704,
             y: 334,
@@ -168,8 +168,8 @@ const Hero = (() => {
             }}
           />
         ))}
-                {/* <div className="bubble pic-1"/>
-                <div className="bubble pic-2"/>
+                <div className="sprite1"/>
+                {/* <div className="bubble pic-2"/>
                 <div className="bubble pic-3"/>
                 <div className="bubble pic-4"/>
                 <div className="bubble pic-5"/>
