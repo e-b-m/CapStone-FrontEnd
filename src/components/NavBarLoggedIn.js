@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import UserProfile from './UserProfile';
-import CareeProfile from './CareeProfile';
-import BubblePage from './BubblePage';
+import UserProfile from '../Pages/UserProfile';
+import CareeProfile from '../Pages/CareeProfile';
+import BubblePage from '../Pages/BubblePage';
 
 const NavBarLoggedIn = () => {
     return ( 

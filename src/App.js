@@ -4,9 +4,8 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { createContext, useContext, useState } from 'react';
 import SignUp from './components/User/SignUp';
 import LogIn from './components/User/LogIn';
-import NavBarLanding from './components/NavBarLanding';
-import NavBarLoggedIn from './components/NavBarLoggedIn';
 import Footer from './components/Footer';
+import LandingPage from './Pages/LandingPage';
 
 
 // login form + user State
@@ -24,8 +23,7 @@ const [user, setUser] = useState()
       
         <UserContext.Provider value={user}>
         {/* <Form /> */}
-        <NavBarLanding/>
-        <NavBarLoggedIn/>
+        <LandingPage/>
         {/* 
         <SignUp/>
         <LogIn user={user}/> */}
