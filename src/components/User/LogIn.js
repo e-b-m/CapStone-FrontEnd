@@ -22,9 +22,6 @@ const LogIn = ({users}) => {
     
     })
 
-    // const listOfEmail = user.emailAddress.map((users), )
-    console.log(users);
-
     const handleSubmit = (event) => {
         event.preventDefault();
         const logInBody = {
@@ -32,8 +29,8 @@ const LogIn = ({users}) => {
             password
         }
             userLogin(logInBody)
-            // setEmailAddress("");
-            // setPassword("");
+            setEmailAddress("");
+            setPassword("");
         }
 
     return (  
