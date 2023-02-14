@@ -8,13 +8,13 @@ const NavBarLoggedIn = () => {
         <>
         <p> Logged in user nav bar </p>
         <BrowserRouter>
-        <button className="userprofile-btn"><Link to="UserProfile"> User Profile </Link></button>
-        <button className="careeprofile-btn"><Link to="CareeProfile"> Caree Profile </Link></button>
-        <button className="bubblepage-btn"><Link to="BubblePage"> Bubble Page </Link></button>
+        <button className="userprofile-btn"><Link to="/UserProfile"> User Profile </Link></button>
+        <button className="careeprofile-btn"><Link to="/CareeProfile"> Caree Profile </Link></button>
+        <button className="bubblepage-btn"><Link to="/BubblePage"> Bubble Page </Link></button>
         <Routes>
-            <Route to="/UserProfile" element={UserProfile}/>
-            <Route to="/CareeProfile" element={CareeProfile}/>
-            <Route to="/BubblePage" element={BubblePage}/>
+            <Route path="/UserProfile" element={<UserProfile/>}/>
+            <Route path="/CareeProfile" element={<CareeProfile/>}/>
+            <Route path="/BubblePage" element={<BubblePage/>}/>
         </Routes>
         </BrowserRouter>
         </> 
