@@ -1,6 +1,7 @@
 const BubblePage = () => {
     return ( 
         <>
+        <p> BubblePage</p>
         </>
      );
 }

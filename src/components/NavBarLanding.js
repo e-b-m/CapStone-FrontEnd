@@ -6,6 +6,7 @@ const NavBarLanding = () => {
     return ( 
     <>
         <BrowserRouter>
+        <img/>
         <p>This is nav bar</p>
         <button className="signup-btn"> <Link to="/SignUp"> Sign up </Link> </button>
         <button className="login-btn"> <Link to='/LogIn'> Log in </Link> </button>

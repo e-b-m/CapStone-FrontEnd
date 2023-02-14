@@ -7,6 +7,7 @@ const NavBarLoggedIn = () => {
     return ( 
         <>
         <p> Logged in user nav bar </p>
+        <img/>
         <BrowserRouter>
         <button className="userprofile-btn"><Link to="/UserProfile"> User Profile </Link></button>
         <button className="careeprofile-btn"><Link to="/CareeProfile"> Caree Profile </Link></button>

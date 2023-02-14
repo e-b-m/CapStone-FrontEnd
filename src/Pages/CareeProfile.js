@@ -1,6 +1,7 @@
 const CareeProfile = () => {
     return ( 
         <>
+        <p> Caree Profile </p>
         </>
      );
 }

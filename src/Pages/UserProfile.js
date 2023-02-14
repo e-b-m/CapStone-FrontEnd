@@ -1,9 +1,10 @@
-const UserProfile = ({user}) => {
+
+
+const UserProfile = () => {
 
     return ( 
         <>
             <p>User Profile</p>
-            
         </> 
     );
 }

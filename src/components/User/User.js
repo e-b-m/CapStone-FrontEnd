@@ -2,7 +2,6 @@ import LogIn from "./LogIn";
 
 const User = ({user}) => {
 
- 
     return ( 
         <>
         <h1>{user.name}</h1>

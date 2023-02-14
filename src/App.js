@@ -20,21 +20,19 @@ const [user, setUser] = useState()
 
   return (
     <>
-      
-        <UserContext.Provider value={user}>
-        {/* <Form /> */}
-        <LandingPage/>
-        {/* 
-        <SignUp/>
-        <LogIn user={user}/> */}
+    <UserContext.Provider value={user}>
+      {/* <Form /> */}
+      <LandingPage/>
+      {/* <SignUp/>
+      <LogIn user={user}/> */}
+      <p>App.js</p>
+    </UserContext.Provider>
 
-        </UserContext.Provider>
-        <Footer/>
-        <p>App.js</p>
-      {/* <UserContainer />
-          <NeedContainer /> 
-          <CareeContainer /> */}
-     
+    <Footer/>
+        
+    {/* <UserContainer />
+    <NeedContainer /> 
+    <CareeContainer /> */}
     </>
   );
 }
