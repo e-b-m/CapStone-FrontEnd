@@ -2,13 +2,13 @@ import { useState } from "react";
 
 const  SERVER_URL = "http://localhost:8080/"
 
-const LogIn = ({users}) => {
+const LogIn = ({setLoggedInUser}) => {
 
-    const [loginEmailAddress, setLoginEmailAddress] = useState("")
-    const [loginPassword, setLoginPassword] = useState("")
-    const [user, setUser] = useState()
+    const [emailAddress, setEmailAddress] = useState("")
+    const [password, setPassword] = useState("")
 
     const userLogin = ((userInfo) => {
+        console.log(userInfo);
         fetch(`${SERVER_URL}users/login`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
@@ -19,7 +19,7 @@ const LogIn = ({users}) => {
         
         .then((response) => response.json())
         .then((response) => {
-            setUser(response)
+            setLoggedInUser(response)
         })
     
     })
@@ -27,12 +27,13 @@ const LogIn = ({users}) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const logInBody = {
-            loginEmailAddress,
-            loginPassword
+            // JSON needs key value pairs
+            emailAddress: emailAddress,
+            password: password
         }
             userLogin(logInBody)
-            // setLoginEmailAddress();
-            // setLoginPassword();
+            // setEmailAddress();
+            // setPassword();
         }
 
     return (  
@@ -43,16 +44,16 @@ const LogIn = ({users}) => {
             id="loginEmailAddress"
             type="text"
             placeholder="Email Address" 
-            defaultValue= {loginEmailAddress}
-            // onChange= {(event)=>setEmailAddress(event.target.value)}
+            defaultValue= {emailAddress}
+            onChange= {(event)=>setEmailAddress(event.target.value)}
             />
 
             <input 
             id="loginPassword"
             type="password"
             placeholder="Password" 
-            defaultValue= {loginPassword}
-            // onChange= {(event)=>setPassword(event.target.value)}
+            defaultValue= {password}
+            onChange= {(event)=>setPassword(event.target.value)}
             />
 
             <input type="submit" value="submit"/>

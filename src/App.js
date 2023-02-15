@@ -10,7 +10,10 @@ import { createContext, useContext, useState } from 'react';
 import SignUp from './components/User/SignUp';
 import LogIn from './components/User/LogIn';
 import Footer from './components/Footer';
-import LandingPage from './Pages/LandingPage';
+import NavBar from './components/NavBar';
+import UserProfile from './Pages/UserProfile';
+import CareeProfile from './Pages/CareeProfile';
+import BubblePage from './Pages/BubblePage';
 
 
 // login form + user State
@@ -21,18 +24,28 @@ import LandingPage from './Pages/LandingPage';
 const UserContext = createContext (null); 
 
 function App() {
-const [user, setUser] = useState()   
+const [loggedInUser, setLoggedInUser] = useState()   
 
   return (
     <>
     <Hero/>
-    <UserContext.Provider value={user}>
-      {/* <Form /> */}
-      <LandingPage/>
+    <UserContext.Provider value={loggedInUser}>
+      {/* <Form /> */}      
+      <BrowserRouter>
+      <NavBar setLoggedInUser={setLoggedInUser}/>
+
+      <Routes>
+
+            <Route path="/UserProfile" element={<UserProfile/>}/>
+            <Route path="/CareeProfile" element={<CareeProfile/>}/>
+            <Route path="/BubblePage" element={<BubblePage/>}/>
+        </Routes>
+        </BrowserRouter>
       {/* <SignUp/>
       <LogIn user={user}/> */}
       <p>App.js</p>
     </UserContext.Provider>
+
 
     <Footer/>
         
