@@ -4,10 +4,13 @@ import './Bubble.css';
 import NeedContainer from './containers/NeedContainer';
 import UserContainer from './containers/UserContainer';
 import CareeContainer from './containers/CareeContainer';
+import Hero from './components/Hero';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { createContext, useContext, useState } from 'react';
 import SignUp from './components/User/SignUp';
-import Hero from './components/Hero';
+import LogIn from './components/User/LogIn';
+import Footer from './components/Footer';
+import LandingPage from './Pages/LandingPage';
 
 
 // login form + user State
@@ -18,58 +21,61 @@ import Hero from './components/Hero';
 const UserContext = createContext (null); 
 
 function App() {
-
 const [user, setUser] = useState()   
-  
-  
+
   return (
     <>
     <Hero/>
     <UserContext.Provider value={user}>
-    <Form />
+      {/* <Form /> */}
+      <LandingPage/>
+      {/* <SignUp/>
+      <LogIn user={user}/> */}
+      <p>App.js</p>
     </UserContext.Provider>
-    <p>App.js</p>
+
+    <Footer/>
+        
     {/* <UserContainer />
-    <NeedContainer /> */}
-    {/* <CareeContainer /> */}
-    <SignUp/>
+    <NeedContainer /> 
+    <CareeContainer /> */}
     </>
   );
 }
 
-function Form() {
-  return (
-  <Panel title = "Welcome to Orbit">
-    <Button>Sign Up</Button> 
-    <Button>Log-in</Button> 
-  </Panel>
-  )
-}
+// function Form() {
+//   return (
+//   <Panel title = "Welcome to Orbit">
+//     <Button>Sign Up</Button> 
+//     <Button>Log-in</Button> 
+//   </Panel>
+//   )
+// }
 
 
-function Panel({title, children}){
-  const user = useContext(UserContext); 
-  const className = 'panel-' + user; 
+// function Panel({title, children}){
+//   const user = useContext(UserContext); 
+//   const className = 'panel-' + user; 
 
-  return (
-    <section className={className}>
-    <h1>{title}</h1>
-    {children}
-    </section>
-  )
-}
+//   return (
+//     <section className={className}>
+//     <h1>{title}</h1>
+//     {children}
+//     </section>
+//   )
+// }
 
 
-function Button({children}) {
-  const user = useContext(UserContext); 
-  const className = 'button-' + user; 
+// function Button({children}) {
+//   const user = useContext(UserContext); 
+//   const className = 'button-' + user; 
 
-  return (
-    <button className={className}>
-      {children}
-    </button>
-  )
-}
+//   return (
+//     <button className={className}>
+//       {children}
+//     </button>
+//   )
+// }
 
 
 export default App;
