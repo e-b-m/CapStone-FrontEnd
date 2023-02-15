@@ -26,7 +26,7 @@ body,
   }
   
   .bubbles-wrapper {
-    background-color: salmon;
+    background-color: #FFB6B9;
     display: flex; 
     flex-direction: column; 
     justify-content: center; 

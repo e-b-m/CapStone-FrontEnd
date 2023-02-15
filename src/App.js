@@ -12,7 +12,7 @@ import LogIn from './components/User/LogIn';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import UserProfile from './Pages/UserProfile';
-import CareeProfile from './Pages/CareeProfile';
+import CareeProfile from './components/Caree/CareeProfile';
 import BubblePage from './Pages/BubblePage';
 import { UserContext, UserContextProvider } from './components/User/ReferenceDataContext';
 
@@ -36,7 +36,7 @@ function App() {
       {/* <Form /> */}      
       <BrowserRouter>
       <NavBar/>
-
+      {/* <CareeContainer/> */}
       <Routes>
             <Route path='/LogIn' element={<LogIn/>}/>
             <Route path="/UserProfile" element={<UserProfile/>}/>
