@@ -51,8 +51,7 @@ const CareeContainer = () => {
       })
     })
     
-    // patch mapping for updatingACaree
-
+    // PATCH: updating a caree to assign a need
     const assigningNeedtoCaree = ((careeToBeAssigned) => {
       fetch (`${SERVER_URL}carees/` + careeToBeAssigned.id, {
           method: "PATCH", 
@@ -67,10 +66,8 @@ const CareeContainer = () => {
       // }
       )
 })
-    assigningNeedtoCaree(carees[1])
 
-    // (delete mapping)
-
+    // DELETE: deleting Caree
     const deletingCaree = ((careeToDelete) => {
       fetch (`${SERVER_URL}carees`, {
         method: "DELETE", 

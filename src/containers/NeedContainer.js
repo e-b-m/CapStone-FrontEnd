@@ -40,6 +40,17 @@ const NeedContainer = () => {
         })
         })
 
+    // DELETE: deleting Caree
+    const deletingNeed = ((needToDelete) => {
+        fetch (`${SERVER_URL}needs`, {
+            method: "DELETE", 
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(needToDelete),
+        })
+        
+        .then((response)=> response.json())
+        .then(response => console.log(response));
+        })
 
     return (  
         <>
