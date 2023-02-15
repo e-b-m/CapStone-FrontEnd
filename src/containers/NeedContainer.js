@@ -26,6 +26,20 @@ const NeedContainer = () => {
         .then((data) => setNeedsById(data))
     }, [])
 
+    // POST: creating a new Need
+    const addingCaree = ((newNeed) => {
+        fetch (`${SERVER_URL}needs`, {
+            method: "POST", 
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(newNeed),
+        })
+        
+        .then((response)=> response.json())
+        .then((response)=> {
+            setNeeds([...needs,response])
+        })
+        })
+
 
     return (  
         <>

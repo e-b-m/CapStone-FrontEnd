@@ -14,8 +14,7 @@ const CareeContainer = () => {
     let {id} = useParams();
     let {uniqueCode} = useParams();
 
-
-    // Fetching all carees
+    // GET: Fetching all Carees
     useEffect(() => {
       fetch(`${SERVER_URL}carees`)
       .then((response) => response.json())
@@ -23,21 +22,22 @@ const CareeContainer = () => {
       .catch((error) => setError(error.message))
     },  []);
 
-    // get by id
+    // GET: by id
     useEffect (() => {
       fetch(`${SERVER_URL}carees/` + id)
       .then((response) => response.json())
       .then((data) => setCareeById(data))
     }, [])
-
+    
+    // GET: by uniqueCode
     useEffect (() => {
       fetch(`${SERVER_URL}carees/` + uniqueCode)
       .then((response) => response.json())
       .then((data) => setCareeByUC(data))
     }, [])
 
-    // post for creating a caree
     
+    // POST: creating a new Caree
     const addingCaree = ((newCaree) => {
       fetch (`${SERVER_URL}carees`, {
         method: "POST", 
@@ -47,14 +47,40 @@ const CareeContainer = () => {
       
       .then((response)=> response.json())
       .then((response)=> {
-        setUser([...carees,response])
+        setCarees([...carees,response])
       })
     })
     
-    // get by uniqueCode
-    
     // patch mapping for updatingACaree
+
+    const assigningNeedtoCaree = ((careeToBeAssigned) => {
+      fetch (`${SERVER_URL}carees/` + careeToBeAssigned.id, {
+          method: "PATCH", 
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(careeToBeAssigned),
+      })
+
+      .then((response)=> response.json())
+      .then((response)=> console.log( response)
+      // {
+      //     // setCarees(response)
+      // }
+      )
+})
+    assigningNeedtoCaree(carees[1])
+
     // (delete mapping)
+
+    const deletingCaree = ((careeToDelete) => {
+      fetch (`${SERVER_URL}carees`, {
+        method: "DELETE", 
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(careeToDelete),
+      })
+      
+      .then((response)=> response.json())
+      .then(response => console.log(response));
+    })
     
     return( 
       <>
