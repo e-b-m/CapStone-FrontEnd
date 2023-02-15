@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import LogIn from './User/LogIn';
+import { UserContext, UserContextProvider } from './User/ReferenceDataContext';
 
-const NavBar = ({setLoggedInUser}) => {
-    const loggedInUser = useContext(UserContext)
+const NavBar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     
     
 

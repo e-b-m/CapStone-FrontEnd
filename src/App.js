@@ -14,6 +14,7 @@ import NavBar from './components/NavBar';
 import UserProfile from './Pages/UserProfile';
 import CareeProfile from './Pages/CareeProfile';
 import BubblePage from './Pages/BubblePage';
+import { UserContext, UserContextProvider } from './components/User/ReferenceDataContext';
 
 
 // login form + user State
@@ -21,18 +22,20 @@ import BubblePage from './Pages/BubblePage';
  // ^ to get logged in user
  // logged in user is set at highest level, then drilled down
 
-const UserContext = createContext (null); 
+// const UserContext = createContext (null); 
 
 function App() {
-const [loggedInUser, setLoggedInUser] = useState()   
+// const [loggedInUser, setLoggedInUser] = useState() 
+
 
   return (
     <>
     <Hero/>
-    <UserContext.Provider value={loggedInUser}>
+    {/* <UserContext.Provider value={loggedInUser}> */}
+      <UserContextProvider>
       {/* <Form /> */}      
       <BrowserRouter>
-      <NavBar setLoggedInUser={setLoggedInUser}/>
+      <NavBar/>
 
       <Routes>
 
@@ -44,7 +47,8 @@ const [loggedInUser, setLoggedInUser] = useState()
       {/* <SignUp/>
       <LogIn user={user}/> */}
       <p>App.js</p>
-    </UserContext.Provider>
+      </UserContextProvider>
+    {/* </UserContext.Provider> */}
 
 
     <Footer/>

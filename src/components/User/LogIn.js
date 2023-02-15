@@ -8,7 +8,6 @@ const LogIn = ({setLoggedInUser}) => {
     const [password, setPassword] = useState("")
 
     const userLogin = ((userInfo) => {
-        console.log(userInfo);
         fetch(`${SERVER_URL}users/login`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
