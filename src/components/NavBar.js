@@ -5,14 +5,7 @@ import { UserContext, UserContextProvider } from './User/ReferenceDataContext';
 
 const NavBar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-
-    // const logged = (loggedInUser) => {
-    //     return (
-    //     loggedInUser ? null 
-    //     : <><LogIn setLoggedInUser={setLoggedInUser}/>
-    //     <button className="userprofile-btn"><Link to="/UserProfile"> User Profile </Link></button>
-    //     </>)
-    // } 
+    
     
 
     return ( 
