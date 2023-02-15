@@ -8,6 +8,7 @@ import { createContext, useContext, useState } from 'react';
 import SignUp from './components/User/SignUp';
 
 
+
 // login form + user State
  // useContext = /needs/{need.id}/{user.id}
  // ^ to get logged in user
@@ -34,12 +35,15 @@ const [user, setUser] = useState()
   );
 }
 
+
 function Form() {
   return (
+    <div className = "Orbit" >
   <Panel title = "Welcome to Orbit">
-    <Button>Sign Up</Button> 
+    <Button className>Sign Up</Button> 
     <Button>Log-in</Button> 
   </Panel>
+  </div>
   )
 }
 
