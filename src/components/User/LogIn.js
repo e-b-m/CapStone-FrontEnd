@@ -4,8 +4,8 @@ const  SERVER_URL = "http://localhost:8080/"
 
 const LogIn = ({users}) => {
 
-    const [emailAddress, setEmailAddress] = useState("")
-    const [password, setPassword] = useState("")
+    const [loginEmailAddress, setLoginEmailAddress] = useState("")
+    const [loginPassword, setLoginPassword] = useState("")
     const [user, setUser] = useState()
 
     const userLogin = ((userInfo) => {
@@ -13,7 +13,9 @@ const LogIn = ({users}) => {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(userInfo),
-        })
+        },
+        
+        )
         
         .then((response) => response.json())
         .then((response) => {
@@ -25,12 +27,12 @@ const LogIn = ({users}) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const logInBody = {
-            emailAddress,
-            password
+            loginEmailAddress,
+            loginPassword
         }
             userLogin(logInBody)
-            // setEmailAddress("");
-            // setPassword("");
+            // setLoginEmailAddress();
+            // setLoginPassword();
         }
 
     return (  
@@ -38,18 +40,18 @@ const LogIn = ({users}) => {
         <form onSubmit={handleSubmit}>
 
             <input 
-            id="emailAddress"
+            id="loginEmailAddress"
             type="text"
             placeholder="Email Address" 
-            defaultValue= {emailAddress}
+            defaultValue= {loginEmailAddress}
             // onChange= {(event)=>setEmailAddress(event.target.value)}
             />
 
             <input 
-            id="password"
+            id="loginPassword"
             type="password"
             placeholder="Password" 
-            defaultValue= {password}
+            defaultValue= {loginPassword}
             // onChange= {(event)=>setPassword(event.target.value)}
             />
 
