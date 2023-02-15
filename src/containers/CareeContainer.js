@@ -36,7 +36,7 @@ const CareeContainer = () => {
       .then((data) => setCareeByUC(data))
     }, [])
 
-    
+//-------------------------------------------------------------------------    
     // POST: creating a new Caree
     const addingCaree = ((newCaree) => {
       fetch (`${SERVER_URL}carees`, {
@@ -51,21 +51,19 @@ const CareeContainer = () => {
       })
     })
     
-    // PATCH: updating a caree to assign a need
-    const assigningNeedtoCaree = ((careeToBeAssigned) => {
-      fetch (`${SERVER_URL}carees/` + careeToBeAssigned.id, {
+    // PATCH: updating a caree
+    const updatingCaree = ((updatedCaree) => {
+      fetch (`${SERVER_URL}carees/` + id, {
           method: "PATCH", 
           headers: {"Content-Type": "application/json"},
-          body: JSON.stringify(careeToBeAssigned),
+          body: JSON.stringify(updatedCaree),
       })
 
       .then((response)=> response.json())
       .then((response)=> console.log( response)
-      // {
-      //     // setCarees(response)
-      // }
+      // { setCarees(response) }
       )
-})
+    })
 
     // DELETE: deleting Caree
     const deletingCaree = ((careeToDelete) => {
@@ -78,6 +76,7 @@ const CareeContainer = () => {
       .then((response)=> response.json())
       .then(response => console.log(response));
     })
+//-------------------------------------------------------------------------    
     
     return( 
       <>
