@@ -38,7 +38,7 @@ function App() {
       <NavBar/>
 
       <Routes>
-
+            <Route path='/LogIn' element={<LogIn/>}/>
             <Route path="/UserProfile" element={<UserProfile/>}/>
             <Route path="/CareeProfile" element={<CareeProfile/>}/>
             <Route path="/BubblePage" element={<BubblePage/>}/>
