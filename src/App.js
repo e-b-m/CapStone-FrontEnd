@@ -1,5 +1,10 @@
 
 import './App.css';
+import './Bubble.css';
+import NeedContainer from './containers/NeedContainer';
+import UserContainer from './containers/UserContainer';
+import CareeContainer from './containers/CareeContainer';
+import Hero from './components/Hero';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { createContext, useContext, useState } from 'react';
 import SignUp from './components/User/SignUp';
@@ -20,6 +25,7 @@ const [user, setUser] = useState()
 
   return (
     <>
+    <Hero/>
     <UserContext.Provider value={user}>
       {/* <Form /> */}
       <LandingPage/>
