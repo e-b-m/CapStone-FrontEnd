@@ -36,6 +36,7 @@ const SignUp = ({user, setUser}) => {
 
     return (  
     <>
+
     <form onSubmit={handleFormSubmit}>
         <input 
         id="name"

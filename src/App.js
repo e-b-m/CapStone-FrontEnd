@@ -25,7 +25,7 @@ import { UserContext, UserContextProvider } from './components/User/ReferenceDat
 // const UserContext = createContext (null); 
 
 function App() {
-// const [loggedInUser, setLoggedInUser] = useState() 
+
 
 
   return (
@@ -38,7 +38,8 @@ function App() {
       <NavBar/>
 
       <Routes>
-
+            <Route path='/LogIn' element={<LogIn/>}/>
+            {/* <Route path='/SignUp' element={<SignUp/>}/> */}
             <Route path="/UserProfile" element={<UserProfile/>}/>
             <Route path="/CareeProfile" element={<CareeProfile/>}/>
             <Route path="/BubblePage" element={<BubblePage/>}/>

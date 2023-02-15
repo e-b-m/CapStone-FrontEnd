@@ -17,11 +17,12 @@ const NavBar = () => {
 
     return ( 
         <>
-        <p> Logged in user nav bar </p>
+        <p> nav bar </p>
         <img/>
+        {/* <LogIn setLoggedInUser={setLoggedInUser}/> */}
 
         {loggedInUser ? null : <button className="signup-btn"> <Link to="/SignUp"> Sign up </Link> </button>}
-        {loggedInUser ? null : <LogIn setLoggedInUser={setLoggedInUser}/>}
+        {loggedInUser ? null : <><button className='login-btn'> <Link to ="/LogIn"> Login </Link></button></>}
         {loggedInUser ? <button className="userprofile-btn"><Link to="/UserProfile"> User Profile </Link></button> : null}
         {loggedInUser ? <button className="careeprofile-btn"><Link to="/CareeProfile"> Caree Profile </Link></button> : null}
         {loggedInUser ? <button className="bubblepage-btn"><Link to="/BubblePage"> Bubble Page </Link></button> : null}

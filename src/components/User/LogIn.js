@@ -37,6 +37,8 @@ const LogIn = ({setLoggedInUser}) => {
 
     return (  
         <>
+        <LogIn setLoggedInUser={setLoggedInUser}/>
+        
         <form onSubmit={handleSubmit}>
 
             <input 
