@@ -36,13 +36,28 @@ const CareeContainer = () => {
       .then((data) => setCareeByUC(data))
     }, [])
 
-    // get by uniqueCode
     // post for creating a caree
+    
+    const addingCaree = ((newCaree) => {
+      fetch (`${SERVER_URL}carees`, {
+        method: "POST", 
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(newCaree),
+      })
+      
+      .then((response)=> response.json())
+      .then((response)=> {
+        setUser([...carees,response])
+      })
+    })
+    
+    // get by uniqueCode
+    
     // patch mapping for updatingACaree
     // (delete mapping)
-
+    
     return( 
-        <>
+      <>
         <CareeList carees={carees}/>
         
         </>
