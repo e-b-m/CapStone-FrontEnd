@@ -18,15 +18,38 @@ const NeedContainer = () => {
       .catch((error) => setError(error.message))
     },  []);
     
-    // get Need by id
-
+    // GET: Need by id
     useEffect (() => {
         fetch(`${SERVER_URL}needs/` + id)
         .then((response)=> response.json())
         .then((data) => setNeedsById(data))
     }, [])
 
+//-------------------------------------------------------------------------    
+    // POST: creating a new Need
+    const addingCaree = ((newNeed) => {
+        fetch (`${SERVER_URL}needs`, {
+            method: "POST", 
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(newNeed),
+        })
+        
+        .then((response)=> response.json())
+        .then((response)=> {
+            setNeeds([...needs,response])
+        })
+        })
 
+    // DELETE: deleting a Need
+    const deletingNeed = ((needToDelete) => {
+        fetch (`${SERVER_URL}needs/` + id, {
+            method: "DELETE",
+        })
+        
+        // .then((response)=> response.json())
+        // .then(response => console.log(response));
+        })
+//-------------------------------------------------------------------------    
     return (  
         <>
         <NeedsList needs={needs}/>
