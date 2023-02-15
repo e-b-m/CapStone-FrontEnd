@@ -1,12 +1,20 @@
 
 import './App.css';
+import './Bubble.css';
 import NeedContainer from './containers/NeedContainer';
 import UserContainer from './containers/UserContainer';
 import CareeContainer from './containers/CareeContainer';
+import Hero from './components/Hero';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { createContext, useContext, useState } from 'react';
 import SignUp from './components/User/SignUp';
-
+import LogIn from './components/User/LogIn';
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
+import UserProfile from './Pages/UserProfile';
+import CareeProfile from './Pages/CareeProfile';
+import BubblePage from './Pages/BubblePage';
+import { UserContext, UserContextProvider } from './components/User/ReferenceDataContext';
 
 
 // login form + user State
@@ -14,63 +22,78 @@ import SignUp from './components/User/SignUp';
  // ^ to get logged in user
  // logged in user is set at highest level, then drilled down
 
-const UserContext = createContext (null); 
+// const UserContext = createContext (null); 
 
 function App() {
+// const [loggedInUser, setLoggedInUser] = useState() 
 
-const [user, setUser] = useState()   
-  
-  
+
   return (
     <>
-    <UserContext.Provider value={user}>
-    <Form />
-    </UserContext.Provider>
-    <p>App.js</p>
+    <Hero/>
+    {/* <UserContext.Provider value={loggedInUser}> */}
+      <UserContextProvider>
+      {/* <Form /> */}      
+      <BrowserRouter>
+      <NavBar/>
+
+      <Routes>
+            <Route path='/LogIn' element={<LogIn/>}/>
+            <Route path="/UserProfile" element={<UserProfile/>}/>
+            <Route path="/CareeProfile" element={<CareeProfile/>}/>
+            <Route path="/BubblePage" element={<BubblePage/>}/>
+        </Routes>
+        </BrowserRouter>
+      {/* <SignUp/>
+      <LogIn user={user}/> */}
+      <p>App.js</p>
+      </UserContextProvider>
+    {/* </UserContext.Provider> */}
+
+
+    <Footer/>
+        
     {/* <UserContainer />
-    <NeedContainer /> */}
-    {/* <CareeContainer /> */}
-    <SignUp/>
+    <NeedContainer /> 
+    <CareeContainer /> */}
     </>
   );
 }
 
 
-function Form() {
-  return (
-    <div className = "Orbit" >
-  <Panel title = "Welcome to Orbit">
-    <Button className>Sign Up</Button> 
-    <Button>Log-in</Button> 
-  </Panel>
-  </div>
-  )
-}
+// function Form() {
+//   return (
+//   <Panel title = "Welcome to Orbit">
+//     <Button>Sign Up</Button> 
+//     <Button>Log-in</Button> 
+//   </Panel>
+//   )
+// }
 
 
-function Panel({title, children}){
-  const user = useContext(UserContext); 
-  const className = 'panel-' + user; 
+// function Panel({title, children}){
+//   const user = useContext(UserContext); 
+//   const className = 'panel-' + user; 
 
-  return (
-    <section className={className}>
-    <h1>{title}</h1>
-    {children}
-    </section>
-  )
-}
+//   return (
+//     <section className={className}>
+//     <h1>{title}</h1>
+//     {children}
+//     </section>
+//   )
+// }
 
 
-function Button({children}) {
-  const user = useContext(UserContext); 
-  const className = 'button-' + user; 
+// function Button({children}) {
+//   const user = useContext(UserContext); 
+//   const className = 'button-' + user; 
 
-  return (
-    <button className={className}>
-      {children}
-    </button>
-  )
-}
+//   return (
+//     <button className={className}>
+//       {children}
+//     </button>
+//   )
+// }
 
 
 export default App;
