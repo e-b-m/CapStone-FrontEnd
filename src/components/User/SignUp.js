@@ -4,7 +4,7 @@ import { UserContext } from "./ReferenceDataContext";
 
 const  SERVER_URL = "http://localhost:8080/"
 
-const SignUp = ({user, setUser}) => {
+const SignUp = () => {
 
     const [name, setName] = useState(""); 
     const [password, setPassword] = useState(""); 
@@ -23,11 +23,7 @@ const SignUp = ({user, setUser}) => {
         })
 
         .then((response)=> response.json())
-        .then((response)=> {
-            setUser([...user, response])
-            navigate("/LogIn")
-        })
-})
+    })
 
     const handleFormSubmit = (event) => {
         const postBody = {
@@ -39,6 +35,7 @@ const SignUp = ({user, setUser}) => {
         setPassword(""); 
         setEmailAddress(""); 
         setLocation(""); 
+        navigate("/LogIn")
      } 
 
     return (  

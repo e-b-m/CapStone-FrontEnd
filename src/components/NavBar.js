@@ -4,8 +4,10 @@ import LogIn from './User/LogIn';
 import { UserContext} from './User/ReferenceDataContext';
 
 const NavBar = () => {
-    const [loggedInUser] = useContext(UserContext)
-    
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const signOut = () => {
+        setLoggedInUser(null);
+    }
 
     return ( 
         <>
@@ -15,10 +17,10 @@ const NavBar = () => {
         {/* <button className="signup-btn"> <Link to="/SignUp"> Sign up </Link> </button> */}
         {loggedInUser ? <>
 
-        <button className="userprofile-btn"><Link to="/UserProfile"> User Profile </Link></button>
-        <button className="careeprofile-btn"><Link to="/CareeProfile"> Caree Profile </Link></button> 
-        <button className="bubblepage-btn"><Link to="/BubblePage"> Bubble Page </Link></button> 
-        
+        <button className="navbtn"><Link to="/UserProfile"> User Profile </Link></button>
+        <button className="navbtn"><Link to="/CareeProfile"> Caree Profile </Link></button> 
+        <button className="navbtn"><Link to="/BubblePage"> Bubble Page </Link></button> 
+        <button className='navbtn' onClick={signOut}>Sign Out</button>
         </> : <>
 
         <button className="signup-btn"> <Link to="/SignUp"> Sign up </Link> </button>
