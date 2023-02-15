@@ -1,0 +1,11 @@
+.Orbit {
+    justify-content: center;
+    display: flex;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Jura:400');
+* { font-family: Jura, Arial; font-weight: 400; }
+
+body{
+    background-color: #6DA1FC;
+}
