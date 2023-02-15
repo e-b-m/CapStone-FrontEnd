@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { UserContext } from "./ReferenceDataContext";
 
 const  SERVER_URL = "http://localhost:8080/"
 
@@ -8,8 +10,12 @@ const SignUp = ({user, setUser}) => {
     const [password, setPassword] = useState(""); 
     const [emailAddress, setEmailAddress] = useState(""); 
     const [location, setLocation] = useState(""); 
+    const navigate = useNavigate() 
+
+    // const [loggedInUser, setLoggedInUser] = useContext(UserContext); 
 
     const addingUser = ((newUser) => {
+        console.log(newUser);
         fetch (`${SERVER_URL}users`, {
             method: "POST", 
             headers: {"Content-Type": "application/json"},
@@ -18,7 +24,8 @@ const SignUp = ({user, setUser}) => {
 
         .then((response)=> response.json())
         .then((response)=> {
-            setUser([...user,response])
+            setUser([...user, response])
+            navigate("/LogIn")
         })
 })
 

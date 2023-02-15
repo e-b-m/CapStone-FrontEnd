@@ -39,9 +39,11 @@ function App() {
 
       <Routes>
             <Route path='/LogIn' element={<LogIn/>}/>
+            <Route path ='/SignUp' element={<SignUp/>}/>
             <Route path="/UserProfile" element={<UserProfile/>}/>
             <Route path="/CareeProfile" element={<CareeProfile/>}/>
             <Route path="/BubblePage" element={<BubblePage/>}/>
+
         </Routes>
         </BrowserRouter>
       {/* <SignUp/>
