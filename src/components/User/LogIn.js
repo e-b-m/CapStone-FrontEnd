@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { UserContext} from './ReferenceDataContext';
+import { useState, useContext } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const  SERVER_URL = "http://localhost:8080/"
 
-const LogIn = ({setLoggedInUser}) => {
-
+const LogIn = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [emailAddress, setEmailAddress] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate() 
+
 
     const userLogin = ((userInfo) => {
         fetch(`${SERVER_URL}users/login`, {
@@ -19,6 +23,7 @@ const LogIn = ({setLoggedInUser}) => {
         .then((response) => response.json())
         .then((response) => {
             setLoggedInUser(response)
+            navigate("/UserProfile")
         })
     
     })
