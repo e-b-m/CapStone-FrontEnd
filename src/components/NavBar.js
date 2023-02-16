@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import CareeProfile from './Caree/CareeProfile';
 import Caree from './Caree/Caree';
 import { UserContext} from './User/ReferenceDataContext';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBNavbar } from 'mdb-react-ui-kit';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBNavbar, MDBBtn } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import logo from "../images/ORBIT.png"
 
@@ -65,7 +65,7 @@ const NavBar = () => {
                     </a>
                     <div class="dropdown">
                       <a
-                        class="text-reset me-3 dropdown-toggle hidden-arrow"
+                        class="text-reset me-1 dropdown-toggle hidden-arrow"
                         href="#"
                         id="navbarDropdownMenuLink"
                         role="button"
@@ -94,7 +94,7 @@ const NavBar = () => {
                           loading="lazy"
                         />
                       </a>
-                              <button className='navbtn' onClick={signOut}>Sign Out</button>
+                              <MDBBtn className='navbtn me-1' color='light' onClick={signOut}>Sign Out</MDBBtn>
                     </div>
                   </div>
                 </div>
@@ -125,24 +125,23 @@ const NavBar = () => {
     </div>
     <div class="d-flex align-items-center">
       
-      {/* USER LOGO */}
       <div class="dropdown">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-      <button className="login-btn"><Link to="/LogIn"> Login </Link></button>                </li>
-        <li class="nav-item">
-           <button className="nav-item"> <Link to="/SignUp"> Sign up </Link> </button>           
-        </li>
-      </ul>
-        <a
-          class="dropdown-toggle d-flex align-items-center hidden-arrow"
-          href="#"
-          id="navbarDropdownMenuAvatar"
-          role="button"
-          data-mdb-toggle="dropdown"
-          aria-expanded="false"
-        >
-        </a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-link">
+            <MDBBtn className="login-btn" color='light'><Link to="/LogIn"> Login </Link></MDBBtn>                </li>
+          <li class="nav-link">
+            <MDBBtn className="signup-btn" color='light'> <Link to="/SignUp"> Sign up </Link> </MDBBtn>           
+          </li>
+        </ul>
+          <a
+            class="dropdown-toggle d-flex align-items-center hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuAvatar"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+          </a>
       </div>
     </div>
   </div>
