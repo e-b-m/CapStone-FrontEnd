@@ -1,6 +1,7 @@
 import { UserContext} from './ReferenceDataContext';
 import { useState, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
+import "../../Login.css";
 
 const  SERVER_URL = "http://localhost:8080/"
 
@@ -17,9 +18,7 @@ const LogIn = () => {
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(userInfo),
         },
-        
         )
-        
         .then((response) => response.json())
         .then((response) => {
             setLoggedInUser(response)
@@ -41,9 +40,9 @@ const LogIn = () => {
         }
 
     return (  
-        <>
-        <form onSubmit={handleSubmit} className="login">
-
+        <div className='loginContainer'>
+        {loggedInUser && <div>You are already logged in!</div>}
+        {!loggedInUser && <form onSubmit={handleSubmit}>
             <input 
             id="loginEmailAddress"
             type="text"
@@ -51,7 +50,6 @@ const LogIn = () => {
             defaultValue= {emailAddress}
             onChange= {(event)=>setEmailAddress(event.target.value)}
             />
-
             <input 
             id="loginPassword"
             type="password"
@@ -62,9 +60,8 @@ const LogIn = () => {
 
             <input type="submit" value="submit"/>
 
-        </form>
-
-        </>
+        </form>}
+        </div>
     );
 
     

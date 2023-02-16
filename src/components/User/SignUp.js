@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "./ReferenceDataContext";
-// import 'src/SignUp.css';
+import '../../SignUp.css';
 
 const SERVER_URL = "http://localhost:8080/";
 

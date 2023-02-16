@@ -1,7 +1,6 @@
 
 import './App.css';
 import './Bubble.css';
-import './SignUp.css'; 
 import NeedContainer from './containers/NeedContainer';
 import UserContainer from './containers/UserContainer';
 import CareeContainer from './containers/CareeContainer';
