@@ -29,7 +29,7 @@ const NeedForm = ({careeOfUser}) => {
         const postNeed = {
             name,
             description,
-            completed,
+            complete,
             caree,
         };
         addNeed(postNeed);
