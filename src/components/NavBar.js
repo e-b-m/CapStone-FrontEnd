@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import LogIn from './User/LogIn';
-import { UserContext, UserContextProvider } from './User/ReferenceDataContext';
+import { UserContext} from './User/ReferenceDataContext';
 
 const NavBar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-    
-    
+    const signOut = () => {
+        setLoggedInUser(null);
+    }
 
     return ( 
         <>
@@ -14,13 +15,19 @@ const NavBar = () => {
         <img/>
 
         {/* <button className="signup-btn"> <Link to="/SignUp"> Sign up </Link> </button> */}
-        {loggedInUser ? null : <button className="signup-btn"> <Link to="/SignUp"> Sign up </Link> </button>}
-        {loggedInUser ? null : <><button className="login-btn"> <Link to="/LogIn"> Login </Link> </button></>}
+        {loggedInUser ? <>
+
+        <button className="navbtn"><Link to="/UserProfile"> User Profile </Link></button>
+        <button className="navbtn"><Link to="/CareeProfile"> Caree Profile </Link></button> 
+        <button className="navbtn"><Link to="/BubblePage"> Bubble Page </Link></button> 
+        <button className='navbtn' onClick={signOut}>Sign Out</button>
+        </> : <>
+
+        <button className="signup-btn"> <Link to="/SignUp"> Sign up </Link> </button>
+        <button className="login-btn"><Link to="/LogIn"> Login </Link></button>
+        {/* <LogIn setLoggedInUser={setLoggedInUser}/> */}
+        </> }
     
-        {loggedInUser ? <button className="userprofile-btn"><Link to="/UserProfile"> User Profile </Link></button> : null}
-        {loggedInUser ? <button className="careeprofile-btn"><Link to="/CareeProfile"> Caree Profile </Link></button> : null}
-        {loggedInUser ? <button className="bubblepage-btn"><Link to="/BubblePage"> Bubble Page </Link></button> : null}
-        
         </> 
     );
 }
