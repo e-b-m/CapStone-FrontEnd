@@ -1,6 +1,7 @@
 
 import './App.css';
 import './Bubble.css';
+import './components/stylesheets/UserProfile.css'
 import Hero from './components/Hero';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignUp from './components/User/SignUp';
