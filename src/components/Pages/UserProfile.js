@@ -14,7 +14,7 @@ const UserProfile = () => {
     return ( 
         <div className='UserProfileContainer'>
             <h1 className='UserHeading' >Welcome {loggedInUser.name}!</h1>
-
+            
             <h2 className='toDosHeading'> Here are your list of to-dos:</h2>
             {userToDoList}
         </div> 
