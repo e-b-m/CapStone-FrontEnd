@@ -5,17 +5,13 @@ import Caree from "./Caree";
 
 const SERVER_URL = "http://localhost:8080/";
 
-const NeedForm = ({careeOfUser}) => {
+const NeedForm = ({caree}) => {
     const [name, setName] = useState("")
     const [description, setDescription] = useState("")
     const [complete, setComplete] = useState(false)
-    const [caree, setCaree] = useState({})
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     
 
-    const anything = loggedInUser.toDoList.map((toDo) => {
-        return <Caree caree={toDo.caree} key={toDo.caree.id}/>
-    })
 
     const addNeed = (newNeed) => {
             fetch(`${SERVER_URL}needs`, {
@@ -25,21 +21,22 @@ const NeedForm = ({careeOfUser}) => {
             }).then((response) => response.json());
             };
         
-    const handleFormSubmit = () => {
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
         const postNeed = {
-            name,
-            description,
-            complete,
-            caree,
+            "name" : name,
+            "description" : description,
+            "complete" : "false",
+            "user" : null,
+            "caree" : caree
         };
+        // console.log(postNeed);
         addNeed(postNeed);
         setName("");
         setDescription("");
-        setComplete(false);
-        setCaree(caree.id)
     
     }
-     console.log(caree);
+    //  console.log(caree);
 
     return(
     <form onSubmit={handleFormSubmit}>

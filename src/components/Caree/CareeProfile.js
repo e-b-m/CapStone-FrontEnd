@@ -17,7 +17,6 @@ const CareeProfile = () => {
         <>
         <h1>{careeOfUser.caree}</h1>
         {careeOfUser}
-        <NeedForm/>
         </>
     )
 
