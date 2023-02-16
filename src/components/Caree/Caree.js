@@ -23,13 +23,15 @@ const Caree = ({caree}) => {
         return (
             <div className="mappedTasks">       
             <ul>
-                <li><h4>{toDo.name}<button>+</button></h4></li>    
+                <li><h4>{toDo.name}</h4></li>    
                 <p>{toDo.description}</p>
+                <button>+ add to your to do list </button>
             </ul>
             </div>
         )}))
     }}, [grabCaree])
     
+
 
     return (
         <>
@@ -41,6 +43,7 @@ const Caree = ({caree}) => {
         <h3>Your caree's to-do list</h3>
         {mappedTasks}
         <NeedForm caree={caree}/>
+        <hr/>
         </>
      );
     }
