@@ -1,3 +1,4 @@
+
 const Hero = (() => {
 
     const bubbles = [
@@ -165,18 +166,15 @@ const Hero = (() => {
             style={{
               backgroundPosition: backgroundPositions[index],
               transform: `translate(${bubble.x}px, ${bubble.y}px) scale(${bubble.s})`,
-            }}
+            }}           
+    
           />
-        ))}
-                <div className="sprite1"/>
-                {/* <div className="bubble pic-2"/>
-                <div className="bubble pic-3"/>
-                <div className="bubble pic-4"/>
-                <div className="bubble pic-5"/>
-                <div className="bubble pic-6"/>
-                <div className="bubble pic-7"/>
-                <div className="bubble pic-8"/>
-                <div className="bubble pic-9"/> */}
+            ))}
+            
+ 
+   
+
+ 
             </div>
         </div>
     )

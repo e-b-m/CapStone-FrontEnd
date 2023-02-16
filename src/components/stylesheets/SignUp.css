@@ -1,0 +1,30 @@
+
+.signUpContainer {
+border: 5px solid rgb(34, 55, 217); 
+margin:auto; 
+width: 40%;
+padding: 2em; 
+background-color: rgb(152, 152, 245);
+}
+
+
+.signUp {
+	text-align: center;
+ }
+
+ form {
+	display: inline-block; 
+ }
+
+
+
+ /* .formBox {
+	border-style: thick solid;
+ } */
+
+ .signUpHeading {
+	justify-content: center;
+	display: flex;
+	font-family: inherit;
+	color: rgba(62, 81, 255, 0.864);
+ }

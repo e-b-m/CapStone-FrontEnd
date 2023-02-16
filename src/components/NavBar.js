@@ -1,6 +1,7 @@
 import { useContext } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import LogIn from './User/LogIn';
+import { Link } from 'react-router-dom';
+import CareeProfile from './Caree/CareeProfile';
+import Caree from './Caree/Caree';
 import { UserContext} from './User/ReferenceDataContext';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBNavbar } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';

@@ -12,12 +12,13 @@ import LogIn from './components/User/LogIn';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import UserProfile from './Pages/UserProfile';
-import CareeProfile from './Pages/CareeProfile';
+import CareeProfile from './components/Caree/CareeProfile';
 import BubblePage from './Pages/BubblePage';
 import { UserContext, UserContextProvider } from './components/User/ReferenceDataContext';
+// import orbitLogo from 'src/orbitLogo.png';
 
 
-// login form + user State
+ // login form + user State
  // useContext = /needs/{need.id}/{user.id}
  // ^ to get logged in user
  // logged in user is set at highest level, then drilled down
@@ -35,7 +36,7 @@ function App() {
       {/* <Form /> */}      
       <BrowserRouter>
       <NavBar/>
-
+      {/* <CareeContainer/> */}
       <Routes>
             <Route path='/LogIn' element={<LogIn/>}/>
             <Route path ='/SignUp' element={<SignUp/>}/>

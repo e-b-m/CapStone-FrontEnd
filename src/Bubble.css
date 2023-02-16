@@ -6,9 +6,11 @@ body,
   width: 100%;
 } */
 
+/* npm install noise */
+
 .bubble {
     background-color: white;
-    background-image: url(./images/spritesheet.png);
+    background-image: url(./images/bubblesBG.jpeg);
     /* background-size: 1076px 1076px; */
     border-radius: 50%;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -17,78 +19,53 @@ body,
     position: absolute;
     transition: opacity ease-in-out 1s;
     width: 152px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
   }
+  
+  @keyframes bubblesAnimate{
+    0%{
+        margin-top: 70px;
+    }
+    100%{
+        margin-top: -100px;
+    }
+  }
+  @keyframes sides{
+    0%{
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: 15px;
+    }
+  }
+
 
   .bubbles {
     height: 600px;
     overflow: hidden;
     position: relative;
+    -webkit-animation: bubblesAnimate 35s linear infinite, sides 2s ease-in-out infinite alternate;
+    animation: bubblesAnimate 35s linear infinite, sides 2s ease-in-out infinite alternate;
+    left: 0%;
+    right: -2%;
+    top: 10%;
   }
   
   .bubbles-wrapper {
-    background-color: salmon;
-    display: flex; 
-    flex-direction: column; 
+    background-color: #FFB6B9;
+    bottom: 0;
+    left: 0;
+    /* position can mean bubbles are behind stuff or in front off */
+    position: fixed;
+    right: 0;
+    top: 10;
+    z-index: -1;
     justify-content: center; 
     height: 100%; 
   }
 
-    #sprite1 {  
-        width: 464px;
-        height: 464px;
-        background: url(./images/spritesheet.png) -0px -0px;
-    }
-    .sprite2 {
-        width: 264px;
-        height: 464px;
-        background: url(./images/spritesheet.png) -528px -0px;
-    }
-    #sprite3 {
-        width: 464px;
-        height: 364px;
-        background: url(./images/spritesheet.png) -764px -564px;
-    }
-    #sprite4 {
-        width: 464px;
-        height: 464px;
-        background: url(./images/spritesheet.png) -764px -200px;
-    }
-    #sprite5 {
-        width: 564px;
-        height: 464px;
-        background: url(./images/spritesheet.png) -1128px -0px;
-    }
-    #sprite6 {
-        width: 764px;
-        height: 764px;
-        background: url(./images/spritesheet.png) -1692px -0px;
-    }
-    #sprite7 {
-        width: 764px;
-        height: 764px;
-        background: url(./images/spritesheet.png) -2492px -0px;
-    }
-    #sprite8 {
-        width: 464px;
-        height: 564px;
-        background: url(./images/spritesheet.png) -3256px -0px;
-    }
-    #sprite9 {
-        width: 464px;
-        height: 764px;
-        background: url(./images/spritesheet.png) -3722px -0px;
-    }
   
-  /* .company-1 {
-    background-position: -154px 0;
-  }
-  
-  .company-2 {
-    background-position: -308px 0;
-  }
-  
-  .company-3 {
-    background-position: -462px 0;
-  } */
 
-
+    
