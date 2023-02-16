@@ -9,7 +9,6 @@ const Caree = ({caree}) => {
         <p>Caree Age: {caree.age}</p>
         <p>Caree Bio: {caree.bio}</p>
         <p>Caree unique code: {caree.uniqueCode}</p>
-        
         </>
      );
     }
