@@ -9,7 +9,7 @@ const NeedForm = ({careeOfUser}) => {
     const [name, setName] = useState("")
     const [description, setDescription] = useState("")
     const [complete, setComplete] = useState(false)
-    const [caree, setCaree] = useState()
+    const [caree, setCaree] = useState({})
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     
 
@@ -29,17 +29,18 @@ const NeedForm = ({careeOfUser}) => {
         const postNeed = {
             name,
             description,
+            completed,
             caree,
         };
         addNeed(postNeed);
         setName("");
         setDescription("");
         setComplete(false);
-        setCaree()
+        setCaree(caree.id)
     
     }
-    //  console.log(loggedInUser);
-    
+     console.log(caree);
+
     return(
     <form onSubmit={handleFormSubmit}>
                 <h1>Add a new task you would like support with</h1>
