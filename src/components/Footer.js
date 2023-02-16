@@ -1,39 +1,13 @@
-// import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-// import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 
 const Footer = () => {
     return ( 
     <>
-        <p> this be footer </p>
-
-
-     {/* <MDBFooter bgColor='dark' className='text-center text-lg-start text-muted'>
+     <MDBFooter bgColor='info' className='text-center text-lg-start text-muted'>
 
             <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>  
-
-                <div>
-                    <div className='me-5 d-none d-lg-block'> 
-                    <span>Follow us on social media!</span> 
-                    </div>
-                    <a href='' className='me-4 text-reset'>
-                    <MDBIcon color='secondary' fab icon='facebook-f' />
-                    </a>
-                    <a href='' className='me-4 text-reset'>
-                    <MDBIcon color='secondary' fab icon='twitter' />
-                    </a>
-                    <a href='' className='me-4 text-reset'>
-                    <MDBIcon color='secondary' fab icon='google' />
-                    </a>
-                    <a href='' className='me-4 text-reset'>
-                    <MDBIcon color='secondary' fab icon='instagram' />
-                    </a>
-                    <a href='' className='me-4 text-reset'>
-                    <MDBIcon color='secondary' fab icon='linkedin' />
-                    </a>
-                    <a href='' className='me-4 text-reset'>
-                    <MDBIcon color='secondary' fab icon='github' />
-                    </a>
-                </div>
+                <a href='#' className='text-reset fw-bold mb-4'>Back to top</a>
             </section>
 
         <section className=''>
@@ -45,8 +19,7 @@ const Footer = () => {
                         © 2023 Orbit
                         </h6>
                         <p>
-                            Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit.
+                            Here at Orbit we want whats best for you and your loved ones. If theres anything we else we can do to help please feel free to get in touch!
                         </p>
                     </MDBCol>
 
@@ -92,8 +65,8 @@ const Footer = () => {
                 </MDBRow>
             </MDBContainer>
         </section>
-        <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}> </div>
-    </MDBFooter>*/}
+        <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}> </div>
+    </MDBFooter>
         </> 
     ); 
 }

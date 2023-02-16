@@ -31,8 +31,6 @@ function App() {
 
   return (
     <>
-    {/* <div><img src = {require("src/orbitLogo")} alt="Orbit Logo"/></div> */}
-    <Hero/>
     {/* <UserContext.Provider value={loggedInUser}> */}
       <UserContextProvider>
       {/* <Form /> */}      
@@ -47,6 +45,7 @@ function App() {
             <Route path="/BubblePage" element={<BubblePage/>}/>
 
         </Routes>
+    <Hero/>
         </BrowserRouter>
       {/* <SignUp/>
       <LogIn user={user}/> */}
