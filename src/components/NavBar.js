@@ -23,18 +23,18 @@ const NavBar = () => {
         {loggedInUser ? 
         
             <>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-                <button className="navbtn"><Link to="/UserProfile"> User Profile </Link></button>
-        </li>
-        <li class="nav-item">
-                <button className="navbtn"><Link to="/CareeProfile"> Caree Profile </Link></button> 
-        </li>
-        <li class="nav-item">
-                <button className="navbtn"><Link to="/BubblePage"> Bubble Page </Link></button> 
-        </li>
-      </ul>
 
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                        <button className="navbtn"><Link to="/UserProfile"> User Profile </Link></button>
+                </li>
+                <li class="nav-item">
+                        <button className="navbtn"><Link to="/CareeProfile"> Caree Profile </Link></button> 
+                </li>
+                <li class="nav-item">
+                        <button className="navbtn"><Link to="/BubblePage"> Bubble Page </Link></button> 
+                </li>
+            </ul>
                 <button className='navbtn' onClick={signOut}>Sign Out</button>
             
             </> 
