@@ -1,6 +1,6 @@
 
 .signUpContainer {
-border: 3px solid rgb(27, 120, 250); 
+/* border: 3px solid rgb(27, 120, 250);  */
 margin:auto; 
 width: 20%;
 border-radius: 50px;
@@ -16,7 +16,7 @@ background-color: rgb(93, 157, 253);
 
 
 .signUp {
-	text-align: left;
+	text-align: center;
  }
 
  form {

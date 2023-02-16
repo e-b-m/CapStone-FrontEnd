@@ -1,11 +1,12 @@
 .loginContainer {
-        border: 3px solid rgb(27, 120, 250); 
+        /* border: 3px solid rgb(27, 120, 250);  */
         margin:auto; 
         width: 20%;
         border-radius: 50px;
         padding: 2em; 
         margin-top: 2em;
         background-color: rgb(93, 157, 253);
+        text-align: center;
     
 }
 

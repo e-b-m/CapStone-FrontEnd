@@ -1,0 +1,23 @@
+.UserProfileContainer {
+    /* border: 3px solid rgb(27, 120, 250);  */
+        margin:auto; 
+        width: 40%;
+        border-radius: 50px;
+        padding: 2em; 
+        margin-top: 2em;
+        background-color: rgb(93, 157, 253);
+        font-size: medium;
+
+}
+
+.UserHeading {
+    text-align: center;
+    color: rgb(25, 82, 237);
+
+}
+
+.toDosHeading {
+    font-size: large;
+    color: rgb(25, 82, 237);
+
+}

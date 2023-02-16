@@ -1,5 +1,7 @@
-import { UserContext} from '../components/User/ReferenceDataContext';
+import { UserContext} from '../User/ReferenceDataContext';
 import { useContext } from "react";
+import "../stylesheets/UserProfile.css";
+
 
 const UserProfile = () => {
     
@@ -24,14 +26,14 @@ const UserProfile = () => {
 
     
     return ( 
-        <>
+        <div className='UserProfileContainer'>
             {/* <h1 className="welcome-user">Welcome {loggedInUser.name}</h1> */}
-            <h1>Welcome {loggedInUser.name}!</h1>
+            <h1 className='UserHeading'>Welcome {loggedInUser.name}!</h1>
             {/* <p>{loggedInUser.userToDoList2}</p> */}
 
-            <h2> Here are your list of to-dos:</h2>
+            <h2 className='toDosHeading'> Here are your list of to-dos:</h2>
             {/* <ul> {toDoList} </ul> */}
-        </> 
+        </div> 
     );
 }
  

@@ -7,9 +7,9 @@ import SignUp from './components/User/SignUp';
 import LogIn from './components/User/LogIn';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
-import UserProfile from './Pages/UserProfile';
+import UserProfile from './components/Pages/UserProfile';
 import CareeProfile from './components/Caree/CareeProfile';
-import BubblePage from './Pages/BubblePage';
+import BubblePage from './components/Pages/BubblePage';
 import { UserContextProvider } from './components/User/ReferenceDataContext';
 
 function App() {
