@@ -60,8 +60,8 @@ const NavBar = () => {
                   </div>
 
                   <div class="d-flex align-items-center">
-                    <a class="text-reset me-3" href="#">
-                      <i class="fas fa-shopping-cart"></i>
+                    <a class="text-reset me-4" href="#">
+                      <MDBBtn className='navbtn me-1' color='light' onClick={signOut}>Sign Out</MDBBtn>
                     </a>
                     <div class="dropdown">
                       <a
@@ -79,7 +79,7 @@ const NavBar = () => {
                     {/* USER LOGO */}
                     <div class="dropdown">
                       <a
-                        class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                        class="dropdown-toggle me-5 d-flex align-items-center hidden-arrow"
                         href="#"
                         id="navbarDropdownMenuAvatar"
                         role="button"
@@ -94,7 +94,6 @@ const NavBar = () => {
                           loading="lazy"
                         />
                       </a>
-                              <MDBBtn className='navbtn me-1' color='light' onClick={signOut}>Sign Out</MDBBtn>
                     </div>
                   </div>
                 </div>
@@ -128,7 +127,8 @@ const NavBar = () => {
       <div class="dropdown">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-link">
-            <MDBBtn className="login-btn" color='light'><Link to="/LogIn"> Login </Link></MDBBtn>                </li>
+            <MDBBtn className="login-btn" color='light'><Link to="/LogIn"> Login </Link></MDBBtn>                
+          </li>
           <li class="nav-link">
             <MDBBtn className="signup-btn" color='light'> <Link to="/SignUp"> Sign up </Link> </MDBBtn>           
           </li>
