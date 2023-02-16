@@ -5,7 +5,7 @@ import Caree from './Caree/Caree';
 import { UserContext} from './User/ReferenceDataContext';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon, MDBNavbar, MDBBtn } from 'mdb-react-ui-kit';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import logo from "../images/ORBIT.png"
+import logo from "../images/TransparentLogo1.png"
 
 const NavBar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
@@ -21,7 +21,7 @@ const NavBar = () => {
         {loggedInUser ? 
         
             <>
-              <nav class="navbar navbar-expand-lg navbar-light bg-info">
+              <nav class="navbar navbar-expand-lg navbar-light bg-primary">
                 <div class="container-fluid">
                   <button
                     class="navbar-toggler"
@@ -34,26 +34,29 @@ const NavBar = () => {
                   >
                     <i class="fas fa-bars"></i>
                   </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <div class="collapse navbar-collapse text-light" id="navbarSupportedContent">
                     {/* <!-- Navbar brand --> */}
-                    <a class="navbar-brand mt-2 mt-lg-1" href="#">
+                    <a class="navbar-brand text-light mt-2 mt-lg-1" href="#">
+                      <Link to="/">
+
                       <img
                         src={logo}
                         height="75"
                         alt="ORBIT Logo"
                         loading="lazy"
-                      />
+                        />
+                        </Link>
                     </a>
                     {/* <!-- Left links --> */}
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav text-light me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                                      <a className="nav-link"><Link to="/UserProfile"> User Profile </Link></a>
+                                      <a className="nav-link"><Link class="text-light" to="/UserProfile"> User Profile </Link></a>
                               </li>
                       <li class="nav-item">
-                                      <a className="nav-link"><Link to="/CareeProfile"> Caree Profile </Link></a> 
+                                      <a className="nav-link"><Link class="text-light" to="/CareeProfile"> Caree Profile </Link></a> 
                               </li>
                       <li class="nav-item">
-                                      <a className="nav-link" class="nav-link"><Link to="/BubblePage"> Bubble Page </Link></a> 
+                                      <a className="nav-link" class="nav-link text-light"><Link class="text-light" to="/BubblePage"> Bubble Page </Link></a> 
                               </li>
                     </ul>
                     {/* <!-- Left links --> */}
@@ -86,13 +89,15 @@ const NavBar = () => {
                         data-mdb-toggle="dropdown"
                         aria-expanded="false"
                       >
+
                         <img
                           src="https://mdbcdn.b-cdn.net/img/new/avatars/18.webp"
                           class="rounded-circle"
                           height="70"
                           alt="Black and White Portrait of a Man"
                           loading="lazy"
-                        />
+                          />
+                         
                       </a>
                     </div>
                   </div>
@@ -114,12 +119,15 @@ const NavBar = () => {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       {/* <!-- Navbar brand --> */}
       <a class="navbar-brand mt-2 mt-lg-1" href="#">
-        <img
+        <Link to="/">
+
+        <img class="align-items-center"
           src={logo}
           height="75"
           alt="ORBIT Logo"
           loading="lazy"
-        />
+          />
+          </Link>
       </a>
     </div>
     <div class="d-flex align-items-center">

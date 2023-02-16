@@ -9,3 +9,7 @@
 body{
     background-color: #6DA1FC;
 }
+
+.Footer h6, .Footer p {
+    color: #6DA1FC;
+}

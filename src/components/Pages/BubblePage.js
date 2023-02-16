@@ -1,8 +1,12 @@
+import sprite from './spritesheet.png'
+import "../stylesheets/BubblePage.css"; 
+
 const BubblePage = () => {
+   
     return ( 
-        <>
-        <p> BubblePage</p>
-        </>
+        <div className="bubblePage">
+        <img src={sprite}></img>
+        </div>
      );
 }
  

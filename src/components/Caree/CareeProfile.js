@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { UserContext } from "../User/ReferenceDataContext"
 import Caree from "./Caree";
+import "../stylesheets/CareeProfile.css"; 
 
 
 const CareeProfile = () => {
@@ -15,13 +16,17 @@ const CareeProfile = () => {
 
 
     return(
-        <>
+        
+        <div className='CareeContainer'>
 
-        <p>dskjfhalskdf</p>
-        <h1>{careeOfUser.caree}</h1>
-        {careeOfUser}
-  
-        </>
+            <h1 className="careeHeading">Your Caree{careeOfUser.caree}</h1>
+            
+            <p className="careeInfo">
+                {careeOfUser}
+            </p>
+            
+        </div>
+        
     )
 
 

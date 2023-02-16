@@ -29,7 +29,6 @@ function App() {
         </Routes>
         <Hero/>
       </BrowserRouter>
-      <p>---Orbit</p>
       </UserContextProvider>
     <Footer/>
     </>

@@ -44,6 +44,9 @@ const LogIn = () => {
         <h1 className='loginHeading'>Login</h1>
         {loggedInUser && <div>You are already logged in!</div>}
         {!loggedInUser && <form onSubmit={handleSubmit}>
+            
+            <div className='email'>
+
             <p>Email Address: </p>
             <input 
             id="loginEmailAddress"
@@ -52,17 +55,20 @@ const LogIn = () => {
             defaultValue= {emailAddress}
             onChange= {(event)=>setEmailAddress(event.target.value)}
             />
+            </div>
+            <div className='password'>
+                <p>Password: </p>
+                <input 
+                    id="loginPassword"
+                    type="password"
+                    placeholder="Password" 
+                    defaultValue= {password}
+                    onChange= {(event)=>setPassword(event.target.value)}/>
+            </div>
+                <div className='submit'>
+                <input type="submit" value="submit"/>
+                </div>
 
-            <p>Password: </p>
-            <input 
-            id="loginPassword"
-            type="password"
-            placeholder="Password" 
-            defaultValue= {password}
-            onChange= {(event)=>setPassword(event.target.value)}
-            />
-
-            <input type="submit" value="submit"/>
 
         </form>}
         </div>
