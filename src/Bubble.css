@@ -54,7 +54,7 @@ body,
   }
   
   .bubbles-wrapper {
-    background-color: #FFB6B9;
+    background-color: rgb(90, 151, 242);
     bottom: 0;
     left: 0;
     /* position can mean bubbles are behind stuff or in front off */
