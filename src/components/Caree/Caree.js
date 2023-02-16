@@ -22,10 +22,13 @@ const Caree = ({caree}) => {
         if(grabCaree.toDoList){
         setMappedTasks(grabCaree.toDoList.map((toDo) => {
         return (
-            <li>
-                <p>{toDo.name}</p>
-                <p>{toDo.description}</p>
-            </li>
+            <>
+            
+            <ul>
+            <li><h4>{toDo.name}</h4></li>    
+            <p>{toDo.description}</p>
+           </ul>
+           </>
         )}))
     }}, [grabCaree])
 
@@ -34,13 +37,14 @@ const Caree = ({caree}) => {
 
     return (
         <>
+       
         <p>Caree Name: {caree.name}</p>
         <p>Caree Age: {caree.age}</p>
         <p>Caree Bio: {caree.bio}</p>
         <p>Caree unique code: {caree.uniqueCode}</p>
-        <ul>
+        <h3>Here are your tasks</h3>
         {mappedTasks}
-        </ul>
+        
         <NeedForm caree={caree}/>
         </>
      );
