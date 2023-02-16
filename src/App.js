@@ -30,7 +30,6 @@ function App() {
 
   return (
     <>
-    <Hero/>
     {/* <UserContext.Provider value={loggedInUser}> */}
       <UserContextProvider>
       {/* <Form /> */}      
@@ -45,6 +44,7 @@ function App() {
             <Route path="/BubblePage" element={<BubblePage/>}/>
 
         </Routes>
+    <Hero/>
         </BrowserRouter>
       {/* <SignUp/>
       <LogIn user={user}/> */}
