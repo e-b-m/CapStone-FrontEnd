@@ -17,6 +17,7 @@ function App() {
 
   return (
     <>
+    
       <UserContextProvider>
       <BrowserRouter>
         <NavBar/> 
