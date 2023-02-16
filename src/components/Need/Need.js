@@ -1,12 +1,13 @@
 const Need = ({need}) => {
-    // useContext = user
+
     return (  
-        <>
-        <p>Need: {need.name}</p>
-        <p>Description: {need.description}</p>
-        <p>{need.completed}</p>
-        {/* <p>Caree:{need.caree.name}</p> */}
-        </>
+        <div className="todo-container">
+        <ul>
+            <li className="need-name">{need.name}:</li>
+            <p className="need-description">{need.description}</p>
+            <p className="need-complete">{need.completed}</p>
+        </ul>
+        </div>
     );
 }
 
