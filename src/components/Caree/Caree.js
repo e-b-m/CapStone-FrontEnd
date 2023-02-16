@@ -9,30 +9,26 @@ const Caree = ({caree}) => {
 
     useEffect(() => {
         if(caree.id >= 0){
-            console.log(caree);
             fetch(`${SERVER_URL}carees/` + caree.id)
       .then((response) => response.json())
       .then((data) => setGrabCaree(data))
-      .then(() => {
-        
+      .then(() => {      
       })  
     }}, [])
+
 
     useEffect(() => {
         if(grabCaree.toDoList){
         setMappedTasks(grabCaree.toDoList.map((toDo) => {
         return (
-            <>
-            
+            <div className="mappedTasks">       
             <ul>
-            <li><h4>{toDo.name}</h4></li>    
-            <p>{toDo.description}</p>
-           </ul>
-           </>
+                <li><h4>{toDo.name}<button>+</button></h4></li>    
+                <p>{toDo.description}</p>
+            </ul>
+            </div>
         )}))
     }}, [grabCaree])
-
-
     
 
     return (
@@ -42,9 +38,8 @@ const Caree = ({caree}) => {
         <p>Caree Age: {caree.age}</p>
         <p>Caree Bio: {caree.bio}</p>
         <p>Caree unique code: {caree.uniqueCode}</p>
-        <h3>Here are your tasks</h3>
+        <h3>Your caree's to-do list</h3>
         {mappedTasks}
-        
         <NeedForm caree={caree}/>
         </>
      );
