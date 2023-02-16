@@ -13,7 +13,6 @@ const UserProfile = () => {
     return ( 
         <>
             <h1>Welcome {loggedInUser.name}!</h1>
-
             <h2> Here are your list of to-dos:</h2>
             {userToDoList}
         </> 
