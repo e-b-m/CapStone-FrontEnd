@@ -5,8 +5,9 @@ margin:auto;
 width: 20%;
 border-radius: 50px;
 padding: 2em; 
-background-color: rgb(70, 142, 250);
- }
+margin-top: 2em;
+background-color: rgb(93, 157, 253);
+}
 
 /* .signUpContainer :hover {
 	transform: scale(1.1);
@@ -15,7 +16,7 @@ background-color: rgb(70, 142, 250);
 
 
 .signUp {
-	text-align: center;
+	text-align: left;
  }
 
  form {
@@ -31,6 +32,7 @@ background-color: rgb(70, 142, 250);
  .signUpHeading {
 	justify-content: center;
 	display: flex;
+	text-align: center;
 	font-family: inherit;
 	color: rgb(8, 84, 225);
  }

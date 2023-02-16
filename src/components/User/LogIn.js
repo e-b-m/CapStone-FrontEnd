@@ -41,8 +41,10 @@ const LogIn = () => {
 
     return (  
         <div className='loginContainer'>
+        <h1 className='loginHeading'>Login</h1>
         {loggedInUser && <div>You are already logged in!</div>}
         {!loggedInUser && <form onSubmit={handleSubmit}>
+            <p>Email Address: </p>
             <input 
             id="loginEmailAddress"
             type="text"
@@ -50,6 +52,8 @@ const LogIn = () => {
             defaultValue= {emailAddress}
             onChange= {(event)=>setEmailAddress(event.target.value)}
             />
+
+            <p>Password: </p>
             <input 
             id="loginPassword"
             type="password"
