@@ -87,7 +87,7 @@ const NavBar = () => {
                         aria-expanded="false"
                       >
                         <img
-                          src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                          src="https://mdbcdn.b-cdn.net/img/new/avatars/18.webp"
                           class="rounded-circle"
                           height="70"
                           alt="Black and White Portrait of a Man"
