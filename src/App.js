@@ -1,6 +1,7 @@
 
 import './App.css';
 import './Bubble.css';
+import './SignUp.css'; 
 import NeedContainer from './containers/NeedContainer';
 import UserContainer from './containers/UserContainer';
 import CareeContainer from './containers/CareeContainer';
@@ -15,9 +16,10 @@ import UserProfile from './Pages/UserProfile';
 import CareeProfile from './Pages/CareeProfile';
 import BubblePage from './Pages/BubblePage';
 import { UserContext, UserContextProvider } from './components/User/ReferenceDataContext';
+// import orbitLogo from 'src/orbitLogo.png';
 
 
-// login form + user State
+ // login form + user State
  // useContext = /needs/{need.id}/{user.id}
  // ^ to get logged in user
  // logged in user is set at highest level, then drilled down
@@ -30,6 +32,7 @@ function App() {
 
   return (
     <>
+    {/* <div><img src = {require("src/orbitLogo")} alt="Orbit Logo"/></div> */}
     <Hero/>
     {/* <UserContext.Provider value={loggedInUser}> */}
       <UserContextProvider>

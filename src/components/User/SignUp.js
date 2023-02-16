@@ -1,83 +1,91 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "./ReferenceDataContext";
+// import 'src/SignUp.css';
 
-const  SERVER_URL = "http://localhost:8080/"
+const SERVER_URL = "http://localhost:8080/";
 
 const SignUp = () => {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [emailAddress, setEmailAddress] = useState("");
+  const [location, setLocation] = useState("");
+  const navigate = useNavigate();
 
-    const [name, setName] = useState(""); 
-    const [password, setPassword] = useState(""); 
-    const [emailAddress, setEmailAddress] = useState(""); 
-    const [location, setLocation] = useState(""); 
-    const navigate = useNavigate() 
+  // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
-    // const [loggedInUser, setLoggedInUser] = useContext(UserContext); 
+  const addingUser = (newUser) => {
+    console.log(newUser);
+    fetch(`${SERVER_URL}users`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newUser),
+    }).then((response) => response.json());
+  };
 
-    const addingUser = ((newUser) => {
-        console.log(newUser);
-        fetch (`${SERVER_URL}users`, {
-            method: "POST", 
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(newUser),
-        })
+  const handleFormSubmit = (event) => {
+    const postBody = {
+      name,
+      password,
+      emailAddress,
+      location,
+    };
 
-        .then((response)=> response.json())
-    })
+    addingUser(postBody);
+    setName("");
+    setPassword("");
+    setEmailAddress("");
+    setLocation("");
+    navigate("/LogIn");
+  };
 
-    const handleFormSubmit = (event) => {
-        const postBody = {
-            name, password, emailAddress, location
-        }
+  return (
+    <div className="signUpContainer">
+      <div className="signUp">
+        <h1 className="signUpHeading">Sign-up here!</h1>
+        <form onSubmit={handleFormSubmit}>
+          <p>Name: </p>
+          <input
+            id="name"
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+          />
 
-        addingUser(postBody) 
-        setName(""); 
-        setPassword(""); 
-        setEmailAddress(""); 
-        setLocation(""); 
-        navigate("/LogIn")
-     } 
+          <p>Password: </p>
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
 
-    return (  
-    <>
-    <form onSubmit={handleFormSubmit}>
-        <input 
-        id="name"
-        type="text"
-        placeholder="Name" 
-        value= {name}
-        onChange= {(event)=>setName(event.target.value)}
-        />
+          <p>Email Address: </p>
+          <input
+            id="emailAddress"
+            type="text"
+            placeholder="Email Address"
+            value={emailAddress}
+            onChange={(event) => setEmailAddress(event.target.value)}
+          />
 
-        <input 
-        id="password"
-        type="password"
-        placeholder="Password" 
-        value= {password}
-        onChange= {(event)=>setPassword(event.target.value)}
-        />
+          <p>Location: </p>
+          <input
+            id="location"
+            type="text"
+            placeholder="Location"
+            value={location}
+            onChange={(event) => setLocation(event.target.value)}
+          />
 
-        <input 
-        id="emailAddress"
-        type="text"
-        placeholder="Email Address" 
-        value= {emailAddress}
-        onChange= {(event)=>setEmailAddress(event.target.value)}
-        />
+          <p> </p>
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+  );
+};
 
-        <input 
-        id="location"
-        type="text"
-        placeholder="Location" 
-        value= {location}
-        onChange= {(event)=>setLocation(event.target.value)}
-        />
-
-        <input type="submit" value="submit"/>
-    </form>
-    </>
-
-    );
-}
- 
 export default SignUp;
