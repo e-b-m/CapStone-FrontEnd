@@ -4,7 +4,7 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 const Footer = () => {
     return ( 
     <>
-     <MDBFooter bgColor='primary' className='text-center text-lg-start text-muted'>
+     <MDBFooter bgColor='primary' className='text-center text-lg-start text-muted fixed-bottom' >
 
             <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>  
                 <a href='#' className='text-light fw-bold mb-4'>Back to top</a>

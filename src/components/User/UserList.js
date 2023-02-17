@@ -4,14 +4,12 @@ const UserList = ({users}) => {
     
     const userComponents = users.map((user) => {
         return <User key={user.id} user={user}/>      
-    }
+        }
     )
   
-
     return ( 
-        <>
-        
-        {userComponents}
+        <>   
+            {userComponents}
         </> 
      );
 }

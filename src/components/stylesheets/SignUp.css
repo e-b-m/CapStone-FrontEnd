@@ -1,20 +1,13 @@
 
 .signUpContainer {
-/* border: 3px solid rgb(27, 120, 250);  */
-margin:auto; 
-width: 20%;
-border-radius: 50px;
-padding: 2em; 
-margin-top: 2em;
-margin-bottom: 2em;
-background-color: rgb(236, 236, 236);
+	margin:auto; 
+	width: 20%;
+	border-radius: 50px;
+	padding: 2em; 
+	margin-top: 2em;
+	margin-bottom: 2em;
+	background-color: rgb(236, 236, 236);
 }
-
-/* .signUpContainer :hover {
-	transform: scale(1.1);
-	transition: 1s;
-} */
-
 
 .signUp {
 	text-align: center;
@@ -23,12 +16,6 @@ background-color: rgb(236, 236, 236);
  form {
 	display: inline-block; 
  }
-
-
-
- /* .formBox {
-	border-style: thick solid;
- } */
 
  .signUpHeading {
 	justify-content: center;

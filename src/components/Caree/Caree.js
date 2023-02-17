@@ -4,6 +4,7 @@ import NeedForm from "./NeedForm";
 const  SERVER_URL = "http://localhost:8080/"
 
 const Caree = ({caree}) => {
+    
     const [mappedTasks, setMappedTasks] = useState([])
     const [grabCaree, setGrabCaree] = useState([])
 
@@ -31,8 +32,6 @@ const Caree = ({caree}) => {
         )}))
     }}, [grabCaree])
     
-
-
     return (
         <>
        

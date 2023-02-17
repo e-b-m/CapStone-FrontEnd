@@ -6,13 +6,12 @@ import Caree from "./Caree";
 const SERVER_URL = "http://localhost:8080/";
 
 const NeedForm = ({caree, user}) => {
+    
     const [name, setName] = useState("")
     const [description, setDescription] = useState("")
     const [complete, setComplete] = useState(false)
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     
-
-
     const addNeed = (newNeed) => {
             fetch(`${SERVER_URL}needs`, {
                 method: "POST",
@@ -31,16 +30,14 @@ const NeedForm = ({caree, user}) => {
             "caree" : caree,
             "user" : user
         };
-        // console.log(postNeed);
         addNeed(postNeed);
         setName("");
         setDescription("");
     }
-    //  console.log(caree);
 
     return(
         <> 
-    <form onSubmit={handleFormSubmit}>
+            <form onSubmit={handleFormSubmit}>
                 <h3>Add a new task {caree.name} needs help with: </h3>
                 <input
                 id="name"

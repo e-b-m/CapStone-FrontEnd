@@ -1,3 +1,4 @@
+import caring from "../images/impact-of-caring.png"
 
 const Hero = (() => {
 
@@ -148,35 +149,34 @@ const Hero = (() => {
             y: 75,
           },
         ];
-        const backgroundPositions = [];
-        for (let i = 0; i < 7; i++) {
-            for (let j = 0; j < 7; j++) {
-              backgroundPositions.push(`${-154 * j}px ${-154 * i}px`);
-            }
-          }
+
+  const backgroundPositions = [];
+  for (let i = 0; i < 7; i++) {
+      for (let j = 0; j < 7; j++) {
+        backgroundPositions.push(`${-154 * j}px ${-154 * i}px`);
+      }
+  }
 
     return(
-        <div className="bubbles-wrapper">
-            <div className="bubbles">
+      <div className="bubbles-wrapper">
+          <div className="bubbles">
             {bubbles.map((bubble, index) => (
-          <div
-            className="bubble"
-            id={`bubble-${index}`}
-            key={`${bubble.x} ${bubble.y}`}
-            style={{
-              backgroundPosition: backgroundPositions[index],
-              transform: `translate(${bubble.x}px, ${bubble.y}px) scale(${bubble.s})`,
-            }}           
-    
-          />
-            ))}
-            
- 
-   
+              <div
+                className="bubble"
+                id={`bubble-${index}`}
+                key={`${bubble.x} ${bubble.y}`}
+                style={{
+                  backgroundPosition: backgroundPositions[index],
+                  transform: `translate(${bubble.x}px, ${bubble.y}px) scale(${bubble.s})`,
+                }}           
 
- 
-            </div>
-        </div>
+              />
+          ))}
+          </div>
+
+          <img src={caring}/>
+      </div>
     )
-})
+  }
+)
 export default Hero;

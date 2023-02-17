@@ -6,12 +6,10 @@ const NeedList = ({needs}) => {
         return <Need key={need.id} need={need}/>
     })
 
-
     return ( 
         <>
-        {needComponents}
+            {needComponents}
         </> 
-
      );
 }
  

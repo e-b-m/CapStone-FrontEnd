@@ -7,29 +7,28 @@
         margin-top: 2em;
         margin-bottom: 2em;
         background-color: rgb(236, 236, 236);
-        text-align: center;
-    
+        text-align: center;   
 }
 
 .loginHeading {
     text-align: center;
     color: rgb(8, 84, 225);
     margin-bottom: 30px;
-
 }
 
 .loginContainer form {
     display: inline-block;
-
 }
 
 .password {
     margin-top: 10px;
 
 }
+
 .password p {
     margin-bottom: -1px;
 }
+
 .email p {
     margin-bottom: -1px;
 }

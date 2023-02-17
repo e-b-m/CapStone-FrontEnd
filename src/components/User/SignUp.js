@@ -6,13 +6,12 @@ import '../stylesheets/SignUp.css';
 const SERVER_URL = "http://localhost:8080/";
 
 const SignUp = () => {
+  
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
   const [location, setLocation] = useState("");
   const navigate = useNavigate();
-
-  // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   const addingUser = (newUser) => {
     console.log(newUser);

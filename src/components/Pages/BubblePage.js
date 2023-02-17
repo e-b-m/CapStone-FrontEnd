@@ -5,7 +5,7 @@ const BubblePage = () => {
    
     return ( 
         <div className="bubblePage">
-        <img src={sprite}></img>
+            <img src={sprite}></img>
         </div>
      );
 }

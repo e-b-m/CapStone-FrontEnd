@@ -25,10 +25,8 @@ const CareeList = ({carees}) => {
     
     return (  
         <>
-        <hr/>
-        {careeComponents}
-     
-        {/* <Caree toDoListCaree={toDoListCaree} setToDoListCaree={setToDoListCaree}/> */}
+            <hr/>
+            {careeComponents}
         </>
     );
 }
