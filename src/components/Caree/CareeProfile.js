@@ -1,8 +1,7 @@
+import "../stylesheets/CareeProfile.css"; 
+import Caree from "./Caree";
 import { useContext } from "react"
 import { UserContext } from "../User/ReferenceDataContext"
-import Caree from "./Caree";
-import "../stylesheets/CareeProfile.css"; 
-
 
 const CareeProfile = () => {
     

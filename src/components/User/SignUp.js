@@ -1,7 +1,7 @@
-import { useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { UserContext } from "./ReferenceDataContext";
 import '../stylesheets/SignUp.css';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const SERVER_URL = "http://localhost:8080/";
 

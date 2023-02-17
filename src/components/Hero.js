@@ -1,5 +1,3 @@
-import caring from "../images/impact-of-caring.png"
-
 const Hero = (() => {
 
     const bubbles = [

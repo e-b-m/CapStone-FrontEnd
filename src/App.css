@@ -13,3 +13,31 @@ body{
 .Footer{
     margin-top: 100px;
 }
+
+.caringImg {
+    width: 140%;
+    translate: -550px 4rem 1500px;
+    filter: hue-rotate(350deg);
+}
+
+.overlay {
+    display: flex;
+  }
+ 
+
+  .leftOverlay {
+    z-index: 1;
+  }
+  
+  .leftOverlay>p {
+    margin-left: 9em;
+  }
+  
+
+  .leftOverlay img {
+    height: 200px;
+    margin-top: 9em;
+    margin-left: 9em;
+    filter: drop-shadow(-6px 12px 6px rgb(255, 241, 158));
+
+  }
