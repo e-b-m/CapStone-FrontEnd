@@ -1,17 +1,6 @@
-/* html,
-body,
-#__next {
-  height: 100%;
-  margin: 0;
-  width: 100%;
-} */
-
-/* npm install noise */
-
 .bubble {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     background-image: url(./images/bubblesBG.jpeg);
-    /* background-size: 1076px 1076px; */
     border-radius: 50%;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(0, 0, 0, 0.1);
     height: 152px;

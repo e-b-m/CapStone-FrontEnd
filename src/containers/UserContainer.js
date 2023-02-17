@@ -28,13 +28,10 @@ const UserContainer = () => {
         .then((data) => setUsersById(data))
     }, [])
 
-    
-
     return (  
         <>
-        <p>Hello from UserContainer</p>
-        <UserList users={users}/>
-        
+            <p>Hello from UserContainer</p>
+            <UserList users={users}/>
         </>
     );
 }

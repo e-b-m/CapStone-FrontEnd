@@ -17,19 +17,18 @@ function App() {
 
   return (
     <>
-    
       <UserContextProvider>
-      <BrowserRouter>
-        <NavBar/> 
-        <Routes>
-            <Route path="/LogIn" element={<LogIn/>}/>
-            <Route path="/SignUp" element={<SignUp/>}/>
-            <Route path="/UserProfile" element={<UserProfile/>}/>
-            <Route path="/CareeProfile" element={<CareeProfile/>}/>
-            <Route path="/BubblePage" element={<BubblePage/>}/>
-        </Routes>
-        <Hero/>
-      </BrowserRouter>
+        <BrowserRouter>
+          <NavBar/> 
+          <Routes>
+              <Route path="/LogIn" element={<LogIn/>}/>
+              <Route path="/SignUp" element={<SignUp/>}/>
+              <Route path="/UserProfile" element={<UserProfile/>}/>
+              <Route path="/CareeProfile" element={<CareeProfile/>}/>
+              <Route path="/BubblePage" element={<BubblePage/>}/>
+          </Routes>
+          <Hero/>
+        </BrowserRouter>
       </UserContextProvider>
     <Footer/>
     </>

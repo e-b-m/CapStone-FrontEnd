@@ -7,3 +7,7 @@
     height: 500px;
     filter: sepia(10%);
 }
+
+.bubblesWrapper {
+    background-color: aqua;
+}

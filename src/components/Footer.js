@@ -3,8 +3,8 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 
 const Footer = () => {
     return ( 
-    <>
-     <MDBFooter bgColor='primary' className='text-center text-lg-start text-muted fixed-bottom' >
+    <div className='Footer'>
+     <MDBFooter bgColor='primary' className='text-center text-lg-start text-muted' >
 
             <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>  
                 <a href='#' className='text-light fw-bold mb-4'>Back to top</a>
@@ -50,15 +50,15 @@ const Footer = () => {
                     <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4 text-light'>
                         <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
                         <p>
-                        <MDBIcon color='secondary' icon='home' className='me-2' />
-                        80 Middlesex St, London E1 7EZ
+                        <MDBIcon color='secondary' icon='home' className='me-0' />
+                        80 Middlesex St, London E17EZ
                         </p>
                         <p>
-                        <MDBIcon color='secondary' icon='envelope' className='me-3' />
+                        <MDBIcon color='secondary' icon='envelope' className='me-0' />
                         info@Orbit.com
                         </p>
                         <p>
-                        <MDBIcon color='light' icon='phone' className='me-3' />
+                        <MDBIcon color='light' icon='phone' className='me-0' />
                         020 7197 9902
                         </p>
                     </MDBCol>
@@ -67,7 +67,7 @@ const Footer = () => {
         </section>
         <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}> </div>
     </MDBFooter>
-        </> 
+        </div> 
     ); 
 }
  

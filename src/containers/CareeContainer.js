@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CareeList from "../components/Caree/CareeList";
-import CareeProfile from '../components/Caree/CareeProfile';
-
 
 const  SERVER_URL = "http://localhost:8080/"
 
@@ -82,9 +80,7 @@ const CareeContainer = () => {
     return( 
       <>
         <CareeList carees={carees}/>
-       
-        </>
-
+      </>
      );
 }
  

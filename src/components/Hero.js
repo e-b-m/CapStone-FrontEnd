@@ -173,8 +173,6 @@ const Hero = (() => {
               />
           ))}
           </div>
-
-          <img src={caring}/>
       </div>
     )
   }
