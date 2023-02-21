@@ -1,70 +1,47 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<img alt="TransparentLogo" src="https://user-images.githubusercontent.com/68750584/219557422-e9f048b4-2910-4c5b-b724-faf8792d4d9c.png" height="200" align="center"/>
+</p>
 
-## Available Scripts
+<h1 align="center" >Orbit: Carer Management Platform </h1>
 
-In the project directory, you can run:
+## Project Description 
 
-### `npm start`
+Orbit is a task management site for carers, it has been designed to make it simple for carers to add tasks that need to be done for their caree. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This app works directly with the Orbit Backend API, which can be found [here](https://github.com/saragilani/CapStone-BackEnd). Follow their set up instructions before you get started installing Orbit. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Features 
+*  Users - can `login` or `signup` to access or create their `User` profile. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* User Profile - renders information about the user including the `to-do` tasks for their caree. The user will also have control of the `caree` page. 
 
-### `npm run build`
+* Caree Profile - renders information about the caree. The `user` can add a need for the caree and also assign a need to themselves. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Follow these steps to get started with the Orbit app:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. To access this application, you can clone this repository using the terminal on your system using:
+```
+$ git clone https://github.com/e-b-m/CapStone-FrontEnd
+```
 
-### `npm run eject`
+2. Within the newly cloned repository, install the default Node modules using:
+```
+$ npm i
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. To get the web app running, use:
+```
+$ npm start
+```
+Orbit should now be open in your default browser on http://localhost:3000. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Here is the initial wireframe that formed the basis for our website design:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Extensions 
+* Adding a calendar component that a user can add important dates/events to.  
+* Allowing a user to assign tasks to another user. 
+* Having a `Bubble Page` that connects all users within the bubble. 
